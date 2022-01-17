@@ -1,0 +1,1812 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Forms Contactos</title>
+<script src="https://kit.fontawesome.com/df26033572.js"></script>
+<style type="text/css">html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+  .typora-export h1::after, .typora-export h2::after, .typora-export h3::after, .typora-export h4::after, .typora-export h5::after, .typora-export h6::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
+}
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space:inherit; overflow-x: visible; }
+.first-line-indent #write p .md-line { text-indent: 0px; }
+.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+h1, h2, h3, h4, h5, h6 { margin-top: 1rem; margin-bottom: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+pre.contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.CodeMirror-line { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+.footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-lines { padding: 4px 0px; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { margin-bottom: -30px; padding-bottom: 30px; height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+.CodeMirror-lint-markers { width: 16px; }
+.CodeMirror-lint-tooltip { background-color: infobackground; border: 1px solid rgb(0, 0, 0); border-radius: 4px; color: infotext; font-family: var(--monospace); overflow: hidden; padding: 2px 5px; position: fixed; white-space: pre-wrap; z-index: 10000; max-width: 600px; opacity: 0; transition: opacity 0.4s; font-size: 0.8em; }
+.CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning { background-position: left bottom; background-repeat: repeat-x; }
+.CodeMirror-lint-mark-error { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJDw4cOCW1/KIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAHElEQVQI12NggIL/DAz/GdA5/xkY/qPKMDAwAADLZwf5rvm+LQAAAABJRU5ErkJggg=="); }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning { background-position: center center; background-repeat: no-repeat; cursor: pointer; display: inline-block; height: 16px; width: 16px; vertical-align: middle; position: relative; }
+.CodeMirror-lint-message-error, .CodeMirror-lint-message-warning { padding-left: 18px; background-position: left top; background-repeat: no-repeat; }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-message-error { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII="); }
+.CodeMirror-lint-marker-warning, .CodeMirror-lint-message-warning { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEX/uwDvrwD/uwD/uwD/uwD/uwD/uwD/uwD/uwD6twD/uwAAAADurwD2tQD7uAD+ugAAAAD/uwDhmeTRAAAADHRSTlMJ8mN1EYcbmiixgACm7WbuAAAAVklEQVR42n3PUQqAIBBFUU1LLc3u/jdbOJoW1P08DA9Gba8+YWJ6gNJoNYIBzAA2chBth5kLmG9YUoG0NHAUwFXwO9LuBQL1giCQb8gC9Oro2vp5rncCIY8L8uEx5ZkAAAAASUVORK5CYII="); }
+.CodeMirror-lint-marker-multiple { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-position: right bottom; width: 100%; height: 100%; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(223, 226, 229); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+
+
+.cm-s-inner { background-color: rgb(38, 50, 56); color: rgb(233, 237, 237); }
+.cm-s-inner .CodeMirror-gutters { background: rgb(38, 50, 56); color: rgb(83, 127, 126); border: none; }
+.cm-s-inner .CodeMirror-guttermarker, .cm-s-inner .CodeMirror-guttermarker-subtle, .cm-s-inner .CodeMirror-linenumber { color: rgb(83, 127, 126); }
+.cm-s-inner .CodeMirror-cursor { border-left: 1px solid rgb(248, 248, 240); }
+.cm-s-inner div.CodeMirror-selected { background: rgba(255, 255, 255, 0.15); }
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected { background: rgba(255, 255, 255, 0.1); }
+.cm-s-inner .CodeMirror-line::selection, .cm-s-inner .CodeMirror-line > span::selection, .cm-s-inner .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.1); }
+.cm-s-inner .CodeMirror-activeline-background { background: rgba(0, 0, 0, 0); }
+.cm-s-inner .cm-keyword { color: rgb(199, 146, 234); }
+.cm-s-inner .cm-operator { color: rgb(233, 237, 237); }
+.cm-s-inner .cm-variable-2 { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-variable-3 { color: rgb(130, 177, 255); }
+.cm-s-inner .cm-builtin { color: rgb(222, 203, 107); }
+.cm-s-inner .cm-atom { color: rgb(247, 118, 105); }
+.cm-s-inner .cm-number { color: rgb(247, 118, 105); }
+.cm-s-inner .cm-def { color: rgb(233, 237, 237); }
+.cm-s-inner .cm-string { color: rgb(195, 232, 141); }
+.cm-s-inner .cm-string-2 { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-comment { color: rgb(84, 110, 122); }
+.cm-s-inner .cm-variable { color: rgb(130, 177, 255); }
+.cm-s-inner .cm-tag { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-meta { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-attribute { color: rgb(255, 203, 107); }
+.cm-s-inner .cm-property { color: rgb(128, 203, 174); }
+.cm-s-inner .cm-qualifier { color: rgb(222, 203, 107); }
+.cm-s-inner .cm-variable-3 { color: rgb(222, 203, 107); }
+.cm-s-inner .cm-tag { color: rgb(255, 83, 112); }
+.cm-s-inner .cm-error { color: rgb(255, 255, 255); background-color: rgb(236, 95, 103); }
+.cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+.md-fences { background-color: rgb(38, 50, 56); color: rgb(233, 237, 237); border: none; }
+.md-fences .code-tooltip { background-color: rgb(38, 50, 56); }
+.md-diagram-panel { font-family: Arial; font-size: 14px; line-height: 16px; }
+
+.typora-export p, .typora-export .footnote-line {white-space: normal;} 
+iframe{
+awidth:auto;
+}
+
+
+
+</style>
+<style type='text/css'>
+body.typora-export{
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #f8f8f8;
+}
+#write-wrapper{
+    margin:0px auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 960px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 1Z0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c2c2c2;
+    
+}
+#write, #custom-footer{
+    max-width: 100%;
+}
+#write{
+	padding: 80px 80px 100px
+}
+.typora-menu  {
+    left:0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    overflow-y: auto;
+    width: 300px;
+    color: #364149;
+    background: #2c2c2c;
+    border-right: 1px solid rgba(0,0,0,.07);
+    -webkit-transition: left 250ms ease;
+    -moz-transition: left 250ms ease;
+    -o-transition: left 250ms ease;
+    transition: left 250ms ease;
+    opacity: .9;
+}
+.hide-menu .typora-menu{
+    left:-300px;
+}
+.main-content{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    color: #000;
+}
+#nav-previous, #nav-next, .top a.toogle{
+  -webkit-transition: left 250ms ease;
+    -moz-transition: left 250ms ease;
+    -o-transition: left 250ms ease;
+    transition: left 250ms ease;
+    background-color: #2c2c2c;
+    opacity: .9;
+}
+.hide-menu #nav-previous, .hide-menu #nav-next, .hide-menu .top a.toogle{
+    left: 0;
+}
+
+.hide-menu .main-content{
+    margin-left:0px;
+}
+
+.md-toc-item a{
+    display: block;
+    padding: 4px 4px;
+    border-bottom: none;
+    color: #fafafa;
+    background: 0 0;
+    position: relative;
+    outline: none;
+}
+.top{
+    position: fixed;
+    top:0;
+    z-index: 4;
+    width: 30%;
+}
+
+.top a.toogle{
+    color:#c2c2c2;
+    padding: 8px;
+    height: 30px;
+    left: 300px;
+    position: fixed;
+    padding-top:2px;
+}
+#nav-previous{
+    color:#c2c2c2;
+    padding: 8px;
+    left: 300px;
+    position: fixed;
+    top: 30px;
+    height: 30px;
+    padding-top:2px;
+}
+#nav-next{
+    color:#c2c2c2;
+    padding: 8px;
+    left: 300px;
+    position: fixed;
+    top: 60px;
+    height: 30px;
+    padding-top:2px;
+}
+.top a.toogle:hover, .top a.toogle:focus, #nav-previous:hover, #nav-next:hover, #nav-previous:focus, #nav-next:focus{
+    color:rgb(65, 131, 196);
+}
+.md-toc-content a{
+    border-left: 1px solid transparent;
+}
+.md-toc-content a.active{
+    border-left: 1px solid #fafafa;
+    color:rgb(65, 131, 196);
+}
+.md-toc-h1 .md-toc-inner{
+    font-weight: inherit;
+}
+.md-toc-h2 .md-toc-inner{
+    margin-left: 0.4em;
+}
+.md-toc-h3 .md-toc-inner{
+    margin-left: 2em;
+}
+.md-toc-h4 .md-toc-inner{
+    margin-left: 3em;
+}
+.md-toc-h5 .md-toc-inner{
+    margin-left: 4em;
+}
+.md-toc-h6 .md-toc-inner{
+    margin-left: 5em;
+}
+
+.md-toc-h1 a.md-toc-inner{
+    font-size: 1.3rem;
+}
+
+.raw-code{
+	cursor:pointer;
+    position: absolute;
+    top: -28px;
+    right: 0;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 2px 4px;
+    border: 1px solid #263237;
+    color: #263237;
+}
+.raw-code.hide{
+	display:none;
+}
+.raw-code.show{
+	display:inherit;
+}
+.typora-export p, .typora-export li {white-space: inherit;} 
+
+</style>
+ 
+</head>
+<body class="typora-export">
+<div class="typora-container">
+  <div class="typora-menu"><div class="md-toc" mdtype="toc">
+	<p class="md-toc-content"><span class='md-toc-item md-toc-h1'><a id='anchor-heading-0' title='3 Generación de formularios' class="md-toc-inner active" style="cursor: pointer;" href="#3-generación-de-formularios">3 Generación de formularios</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-1' title='3.1 Creación del formulario en el controlador' class="md-toc-inner" style="cursor: pointer;" href="#31-creación-del-formulario-en-el-controlador">3.1 Creación del formulario en el controlador</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-2' title='3.1.1 Renderizando el formulario' class="md-toc-inner" style="cursor: pointer;" href="#311-renderizando-el-formulario">3.1.1 Renderizando el formulario</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-3' title='3.1.2 Etiquetas personalizadas' class="md-toc-inner" style="cursor: pointer;" href="#312-etiquetas-personalizadas">3.1.2 Etiquetas personalizadas</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-4' title='3.1.3 Mejorando nuestro formulario' class="md-toc-inner" style="cursor: pointer;" href="#313-mejorando-nuestro-formulario">3.1.3 Mejorando nuestro formulario</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-5' title='3.2 Envío de formularios' class="md-toc-inner" style="cursor: pointer;" href="#32-envío-de-formularios">3.2 Envío de formularios</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-6' title='3.2.1 Modificación de datos' class="md-toc-inner" style="cursor: pointer;" href="#321-modificación-de-datos">3.2.1 Modificación de datos</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-7' title='3.3 Validación de formularios' class="md-toc-inner" style="cursor: pointer;" href="#33-validación-de-formularios">3.3 Validación de formularios</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-8' title='3.4 Otras consideraciones finales' class="md-toc-inner" style="cursor: pointer;" href="#34-otras-consideraciones-finales">3.4 Otras consideraciones finales</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-9' title='3.4.1 Creación de clases para formularios' class="md-toc-inner" style="cursor: pointer;" href="#341-creación-de-clases-para-formularios">3.4.1 Creación de clases para formularios</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-10' title='3.4.2 Añadiendo estilo a los formularios' class="md-toc-inner" style="cursor: pointer;" href="#342-añadiendo-estilo-a-los-formularios">3.4.2 Añadiendo estilo a los formularios</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-11' title='3.4.3 Añadir estilos para las validaciones' class="md-toc-inner" style="cursor: pointer;" href="#343-añadir-estilos-para-las-validaciones">3.4.3 Añadir estilos para las validaciones</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-12' title='3.4.4 Creación guiada de formularios' class="md-toc-inner" style="cursor: pointer;" href="#344-creación-guiada-de-formularios">3.4.4 Creación guiada de formularios</a></span>
+</p></div></div>
+  <div class="typora-export  main-content">
+  <div class='top'>
+    <a class='toogle expanded pull-left js-toolbar-action' aria-label='' href='#'><i class='fas fa-align-justify'></i></a>
+    <a class='' href='#' id='nav-previous'><i class='fas fa-angle-double-left'></i></a>
+    <a class='' href='#' id='nav-next'><i class='fas fa-angle-double-right'></i></a>
+  </div>
+    <div id='write-wrapper'>
+      <div id='custom-header'>
+        <!--put here your custom header -->
+       </div>
+       <div id="write" class="">
+<h1 id="heading-0">
+<a name="3-generaci%C3%B3n-de-formularios" class="md-header-anchor"></a><span>3 Generación de formularios</span>
+</h1>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/YZzLjD8PSDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><span>Hasta este apartado hemos aprendido algunos conceptos útiles de Symfony y algunos de sus bundles más destacados, como por ejemplo la generación de vistas con el motor de plantillas Twig y  la comunicación con la base de datos a través del ORM Doctrine. Hemos hecho algunos controladores de ejemplo para buscar datos, o para insertar. Pero, en este último caso, al no disponer aún de un mecanismo para que se envíen datos de inserción desde el cliente, hemos optado por ahora por insertar unos datos prefijados o dummy data, es decir, un contacto con unos datos ya predefinidos en el código.</span></p>
+<p><span>En este apartado veremos de qué forma se pueden definir formularios en Symfony asociados a una determinada entidad, para que lo que se envíe en el formulario se asocie a un objeto de dicha entidad, y para que podamos pre­cargar el formulario con los datos de una entidad ya existente, con el fin de poderlos modificar.</span></p>
+<h2 id="heading-1">
+<a name="31-creaci%C3%B3n-del-formulario-en-el-controlador" class="md-header-anchor"></a><span>3.1 Creación del formulario en el controlador</span>
+</h2>
+<p><span>Los formularios pueden crearse fácilmente desde cualquier controlador. Basta con que creemos u obtengamos el objeto asociado al formulario (por ejemplo, un contacto), y carguemos un formulario con él. En nuestra aplicación de contactos, vamos a crear un nuevo controlador que responda a la URI </span><code>/contacto/nuevo</code><span>, y que cree un contacto vacío y muestre el formulario.</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99731px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><span><span>​</span>x</span></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">namespace</span> <span class="cm-def">App\Controller</span>;</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\TextType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\SubmitType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">ContactoController</span> <span class="cm-keyword">extends</span> <span class="cm-variable">AbstractController</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">* @Route("/contacto/nuevo", name="nuevo_contacto")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">nuevo</span>() {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Contacto</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$formulario</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createFormBuilder</span>(<span class="cm-variable-2">$contacto</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'nombre'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'telefono'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'email'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'save'</span>, <span class="cm-variable">SubmitType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Enviar'</span>))</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">getForm</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'nuevo.html.twig'</span>, <span class="cm-keyword">array</span>(</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'formulario'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createView</span>()</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>));</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>}</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 571px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 571px;"></div>
+</div>
+</div></pre>
+<p><span>Como podemos ver, a través del </span><code>form builder</code><span> de Symfony se crea el formulario. Después, añadimos tantos campos como atributos tenga la entidad (normalmente), asociando cada atributo con su campo por el nombre.</span></p>
+<p><span>En cada campo especificamos también de qué tipo es. En nuestro caso, hemos definido tres cuadros de texto (</span><code>TextType</code><span>) para el nombre, teléfono y  e­mail, y un botón de </span><code>submit</code><span> (</span><code>SubmitType</code><span>) para poder enviar el formulario. Podéis consultar aquí un listado más detallado de los tipos de campos que tenemos disponibles. Algunos que pueden resultarnos interesantes son:</span></p>
+<ul>
+<li>
+<code>TextType</code><span> (cuadros de texto de una sola línea, como el ejemplo anterior)</span>
+</li>
+<li>
+<code>TextareaType</code><span> (cuadros de texto de varias líneas)</span>
+</li>
+<li>
+<code>EmailType</code><span> (cuadros de texto de tipo e­mail)</span>
+</li>
+<li>
+<code>IntegerType</code><span> (cuadros de texto para números enteros)</span>
+</li>
+<li>
+<code>NumberType</code><span> (cuadros de texto para números en general)</span>
+</li>
+<li>
+<code>PasswordType</code><span> (cuadros enmascarados para passwords)</span>
+</li>
+<li>
+<code>EntityType</code><span> (desplegables para elegir valores vinculados a otra entidad)</span>
+</li>
+<li>
+<code>DateType</code><span> (para fechas)</span>
+</li>
+<li>
+<code>CheckboxType</code><span> (para checkboxes)</span>
+</li>
+<li>
+<code>RadioType</code><span> (para botones de radio o radio buttons)</span>
+</li>
+<li>
+<code>HiddenType</code><span> (para controles ocultos)</span>
+</li>
+<li><span>... etc.</span></li>
+</ul>
+<h3 id="heading-2">
+<a name="311-renderizando-el-formulario" class="md-header-anchor"></a><span>3.1.1 Renderizando el formulario</span>
+</h3>
+<p><span>El código del controlador anterior termina renderizando una vista llamada </span><code>nuevo.html.twig</code><span> que, por ahora, no existe. En esta vista deberemos renderizar el formulario. Podría quedar así:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99731px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> extends</span><span class="cm-variable"> </span><span class="cm-string">'base.html.twig'</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> title </span><span class="cm-tag">%}</span>Contactos<span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> body </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;h1&gt;Nuevo contacto&lt;/h1&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-tag">{{</span><span class="cm-variable"> form(formulario) </span><span class="cm-tag">}}</span>    </span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 166px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 166px;"></div>
+</div>
+</div></pre>
+<p><span>La línea debajo del encabezado </span><code>h1</code><span> es la responsable de la renderización del formulario propiamente dicho, a partir del parámetro formulario que le pasamos desde el controlador.</span>
+<span>Si ahora accedemos a </span><a href="http://127.0.0.1:8080/contacto/nuevo" target="_blank" class="url">http://127.0.0.1:8080/contacto/nuevo</a><span> podremos ver el formulario:</span></p>
+<p><img src="assets/image-20220109174250630.png" referrerpolicy="no-referrer" alt="image-20220109174250630"></p>
+<h3 id="heading-3">
+<a name="312-etiquetas-personalizadas" class="md-header-anchor"></a><span>3.1.2 Etiquetas personalizadas</span>
+</h3>
+<p><span>Como podemos ver para el caso del botón de </span><code>submit</code><span>, podemos especificar un tercer parámetro en el método </span><code>add</code><span> que es un array de propiedades del control en cuestión. Una de ellas es la propiedad </span><code>label</code><span>, que nos permite especificar qué texto tendrá asociado el control. Por defecto, se asocia el nombre del atributo correspondiente en la entidad, pero podemos cambiarlo por un texto personalizado. Para el </span><code>e­mail</code><span>, por ejemplo, podríamos poner:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99756px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'email'</span>, <span class="cm-variable">EmailType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Correo electrónico'</span>))</span></pre>
+</div></div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 31px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 31px;"></div>
+</div>
+</div></pre>
+<p><img src="assets/image-20220109174433735.png" referrerpolicy="no-referrer" alt="image-20220109174433735"></p>
+<h3 id="heading-4">
+<a name="313-mejorando-nuestro-formulario" class="md-header-anchor"></a><span>3.1.3 Mejorando nuestro formulario</span>
+</h3>
+<p><span>Aprovechando la variedad de tipos de campos que ofrece Symfony, vamos a mejorar un poco nuestro formulario añadiendo el dato Provincia que vimos en el apartado de </span><code>Doctrine</code><span>. Para ello podemos emplear un </span><code>EntityType</code><span> que tome sus datos de la entidad </span><code>Provincia</code><span>.</span></p>
+<p><span>Con esto, el formulario quedaría así:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99731px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\EmailType</span>;</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Bridge\Doctrine\Form\Type\EntityType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">nuevo</span>() {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>...</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$formulario</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createFormBuilder</span>(<span class="cm-variable-2">$contacto</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'nombre'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'telefono'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'email'</span>, <span class="cm-variable">EmailType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Correo electrónico'</span>))</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'provincia'</span>, <span class="cm-variable">EntityType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'class'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable">Provincia</span>::<span class="cm-keyword">class</span>,</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'choice_label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'nombre'</span>,))</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'save'</span>, <span class="cm-variable">SubmitType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Enviar'</span>))</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">getForm</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>...</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 346px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 346px;"></div>
+</div>
+</div></pre>
+<p><img src="assets/image-20220109174804617.png" referrerpolicy="no-referrer" alt="image-20220109174804617"></p>
+<p><strong><span>Automáticamente obtiene los datos de la provincia de la base de datos</span></strong></p>
+<h2 id="heading-5">
+<a name="32-env%C3%ADo-de-formularios" class="md-header-anchor"></a><span>3.2 Envío de formularios</span>
+</h2>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/2X2Q98eXgMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><span>Hablemos ahora sobre cómo enviar el formulario. Por defecto, si no se indica nada, el formulario se envía por </span><code>POST</code><span> a la misma URI que lo genera (en nuestro caso, a </span><code>/contacto/nuevo</code><span>). De hecho, si intentamos enviar el formulario en este momento, con los datos que sean, se volverá a cargar la vista del formulario, pero no habremos insertado nada.</span></p>
+<p><span>Para gestionar el envío de estos datos, hay que hacer algunas modificaciones sobre nuestro controlador:</span></p>
+<ul>
+<li>
+<span>En primer lugar, el controlador recibirá un objeto </span><code>Request</code><span>, que contendrá los datos del formulario enviado (en el caso de que se haya enviado):</span>
+</li>
+<li><span>En segundo lugar, dentro del código del controlador, debemos procesar esos datos (si los hay), validarlos (esto lo veremos a continuación) y si son válidos, realizar la correspondiente inserción o modificación.</span></li>
+<li><span>Finalmente, podemos redirigir a otra ruta en caso de éxito, o volver a renderizar el formulario en caso de error, o en caso de que no se haya enviado (por ejemplo, cuando cargamos el formulario para rellenarlo).</span></li>
+</ul>
+<p><span>Uniendo estas premisas, nuestro controlador quedaría así:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99738px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* @Route("/contacto/nuevo", name="nuevo_contacto")</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">nuevo</span>(<span class="cm-variable">ManagerRegistry</span> <span class="cm-variable-2">$doctrine</span>, <span class="cm-variable">Request</span> <span class="cm-variable-2">$request</span>) {</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Contacto</span>();</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    </span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$formulario</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createFormBuilder</span>(<span class="cm-variable-2">$contacto</span>)</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'nombre'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'telefono'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'email'</span>, <span class="cm-variable">EmailType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Correo electrónico'</span>))</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'provincia'</span>, <span class="cm-variable">EntityType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'class'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable">Provincia</span>::<span class="cm-keyword">class</span>,</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'choice_label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'nombre'</span>,))</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'save'</span>, <span class="cm-variable">SubmitType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Enviar'</span>))</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">-&gt;</span><span class="cm-variable">getForm</span>();</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">handleRequest</span>(<span class="cm-variable-2">$request</span>);</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">if</span> (<span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">isSubmitted</span>() <span class="cm-operator">&amp;&amp;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">isValid</span>()) {</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getData</span>();</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$entityManager</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$doctrine</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getManager</span>();</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$entityManager</span><span class="cm-operator">-&gt;</span><span class="cm-variable">persist</span>(<span class="cm-variable-2">$contacto</span>);</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$entityManager</span><span class="cm-operator">-&gt;</span><span class="cm-builtin">flush</span>();</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">redirectToRoute</span>(<span class="cm-string">'ficha_contacto'</span>, [<span class="cm-string">"codigo"</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$contacto</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getId</span>()]);</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'nuevo.html.twig'</span>, <span class="cm-keyword">array</span>(</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'formulario'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createView</span>()</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        ));</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 683px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 683px;"></div>
+</div>
+</div></pre>
+<p><span>Si probamos ahora a cargar el formulario y realizar una inserción, nos enviará a la página de inicio, y podremos ver el nuevo contacto presente en la tabla correspondiente de la base de datos.</span></p>
+<h3 id="heading-6">
+<a name="321-modificaci%C3%B3n-de-datos" class="md-header-anchor"></a><span>3.2.1 Modificación de datos</span>
+</h3>
+<p><span>Lo que hemos hecho en el ejemplo anterior es una inserción de un nuevo contacto, pero... ¿cómo sería hacer una modificación de contacto existente?. El funcionamiento sería muy similar, pero con un pequeño cambio: la ruta del controlador recibirá como parámetro el código del contacto a modificar, y a partir de ahí, buscaríamos el contacto y lo cargaríamos en el formulario, incluyendo su </span><code>id</code><span>. De esta forma, al hacer </span><code>persist</code><span> se modificaría el contacto existente.</span></p>
+<p><span>Podemos probarlo con este controlador:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99738px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* @Route("/contacto/editar/{codigo}", name="editar_contacto",</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">requirements={"codigo"="\d+"})</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">editar</span>(<span class="cm-variable">Request</span> <span class="cm-variable-2">$request</span>, <span class="cm-variable-2">$codigo</span>) {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$repositorio</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getDoctrine</span>()<span class="cm-operator">-&gt;</span><span class="cm-variable">getRepository</span>(<span class="cm-variable">Contacto</span>::<span class="cm-keyword">class</span>);</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$repositorio</span><span class="cm-operator">-&gt;</span><span class="cm-variable">find</span>(<span class="cm-variable-2">$codigo</span>);</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$formulario</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createFormBuilder</span>(<span class="cm-variable-2">$contacto</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'nombre'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'telefono'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'email'</span>, <span class="cm-variable">EmailType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'provincia'</span>, <span class="cm-variable">EntityType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'class'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable">Provincia</span>::<span class="cm-keyword">class</span>,</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'choice_label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'nombre'</span>,))</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'save'</span>, <span class="cm-variable">SubmitType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Enviar'</span>))</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-operator">-&gt;</span><span class="cm-variable">getForm</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">handleRequest</span>(<span class="cm-variable-2">$request</span>);</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>...</span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 503px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 503px;"></div>
+</div>
+</div></pre>
+<p><span>Ahora, si accedemos a </span><a href="http://127.0.0.1:8080/contacto/editar/1" target="_blank" class="url">http://127.0.0.1:8080/contacto/editar/1</a><span>, por ejemplo (suponiendo que tengamos un contacto con </span><code>id = 1</code><span> en la base de datos), se cargará el formulario con sus datos, y al enviarlo, se modificarán los campos que hayamos cambiado, y se cargará la página de inicio.</span></p>
+<h2 id="heading-7">
+<a name="33-validaci%C3%B3n-de-formularios" class="md-header-anchor"></a><span>3.3 Validación de formularios</span>
+</h2>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/qIHk_P2kE88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><span>Ahora que ya sabemos crear, enviar y gestionar formularios, veamos un último paso, que sería la validación de datos de dichos formularios previa a su envío. En el caso de Symfony, la validación no se aplica al formulario, sino a la entidad subyacente (es decir, a la clase </span><code>Contacto</code><span>, por ejemplo).</span></p>
+<p><span>Por lo tanto, la validación la obtendremos añadiendo una serie de restricciones o comprobaciones a estas clases. Por ejemplo, para indicar que el </span><code>nombre</code><span>, </span><code>teléfono</code><span> y </span><code>e­-mail</code><span> del contacto no pueden estar vacíos, añadimos estas anotaciones en los atributos de la clase </span><code>Contacto</code><span>:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99744px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;?</span><span class="cm-variable">php</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">namespace</span> <span class="cm-def">App\Entity</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">App\Repository\ContactoRepository</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Validator\Constraints</span> <span class="cm-keyword">as</span> <span class="cm-variable">Assert</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Doctrine\ORM\Mapping</span> <span class="cm-keyword">as</span> <span class="cm-variable">ORM</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @ORM\Entity(repositoryClass=ContactoRepository::class)</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">Contacto</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\Id</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\GeneratedValue</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\Column(type="integer")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-2">$id</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\Column(type="string", length=255)</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @Assert\NotBlank</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* (message="El nombre es obligatorio")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-2">$nombre</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\Column(type="string", length=15)</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @Assert\NotBlank</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* (message="El teléfono es obligatorio")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-2">$telefono</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\Column(type="string", length=255)</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @Assert\NotBlank()</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @Assert\Email</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* (message="El email {{ value }} no es válido")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-2">$email</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @ORM\ManyToOne(targetEntity=Provincia::class)</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-2">$provincia</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">getId</span>(): <span class="cm-operator">?</span><span class="cm-variable">int</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">id</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">getNombre</span>(): <span class="cm-operator">?</span><span class="cm-variable">string</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">nombre</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">setNombre</span>(<span class="cm-operator">?</span><span class="cm-variable">string</span> <span class="cm-variable-2">$nombre</span>): <span class="cm-keyword">self</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">nombre</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$nombre</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">getTelefono</span>(): <span class="cm-operator">?</span><span class="cm-variable">string</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">telefono</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">setTelefono</span>(<span class="cm-operator">?</span><span class="cm-variable">string</span> <span class="cm-variable-2">$telefono</span>): <span class="cm-keyword">self</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">telefono</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$telefono</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">getEmail</span>(): <span class="cm-operator">?</span><span class="cm-variable">string</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">email</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">setEmail</span>(<span class="cm-operator">?</span><span class="cm-variable">string</span> <span class="cm-variable-2">$email</span>): <span class="cm-keyword">self</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">email</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$email</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">getProvincia</span>(): <span class="cm-operator">?</span><span class="cm-variable">Provincia</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">provincia</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">setProvincia</span>(<span class="cm-operator">?</span><span class="cm-variable">Provincia</span> <span class="cm-variable-2">$provincia</span>): <span class="cm-keyword">self</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">provincia</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$provincia</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 2281px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 2281px;"></div>
+</div>
+</div></pre>
+<p><span>Estas aserciones repercuten directamente sobre el código HTML del formulario, donde se añadirá el atributo </span><code>required</code><span> para que se validen los datos en el cliente. Para probarlo, hay que modificar el atributo </span><code>required</code><span> mediante Firebug.</span></p>
+<p><span>Además, en todos los setters hemos modificado el valor del atributo para que este sea nulo. Por ejemplo:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99738px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">setTelefono</span>(<span class="cm-operator">?</span><span class="cm-variable">string</span> <span class="cm-variable-2">$telefono</span>): <span class="cm-keyword">self</span></span></pre>
+</div></div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 31px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 31px;"></div>
+</div>
+</div></pre>
+<p><span>Si no hacemos el campo </span><code>nullable</code><span>  dará el siguiente error al intentar almacenar un dato vacío:</span></p>
+<p><img src="assets/image-20220117183231785.png" referrerpolicy="no-referrer" alt="image-20220117183231785"></p>
+<p><span>En el caso del e­mail, además, podemos especificar que queremos que sea un e­mail válido, lo que se consigue con esta otra anotación:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99744px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @ORM\Column(type="string", length=255)</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @Assert\NotBlank()</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @Assert\Email()</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">private</span> <span class="cm-variable-2">$email</span>;</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 143px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 143px;"></div>
+</div>
+</div></pre>
+<p><span>Estas funciones de validación admiten una serie de parámetros útiles. Uno de los más útiles es </span><code>message</code><span>, que se emplea para determinar el mensaje de error que mostrar al usuario en caso de que el dato no sea válido. Por ejemplo, para el e­mail, podemos especificar este mensaje de error:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99744px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @ORM\Column(type="string", length=255)</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @Assert\NotBlank()</span></span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* @Assert\Email(message="El email {{ value }} no es válido")</span></span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">*/</span></span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">private</span> <span class="cm-variable-2">$email</span>;</span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 143px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 143px;"></div>
+</div>
+</div></pre>
+<p><span>Y se disparará cuando no escribamos un e­mail válido e intentemos enviar el formulario:</span></p>
+<p><img src="assets/1549870910746.png" referrerpolicy="no-referrer" alt="1549870910746"></p>
+<blockquote><p><span>Recordad que para probar que funciona la validación en el lado del servidor debéis cambiar con firebug el tipo de campo a </span><code>Text</code></p></blockquote>
+<h2 id="heading-8">
+<a name="34-otras-consideraciones-finales" class="md-header-anchor"></a><span>3.4 Otras consideraciones finales</span>
+</h2>
+<p><span>Para finalizar este apartado, veamos algunas cuestiones que hemos dejado en el tintero y no dejan de ser igualmente importantes.</span></p>
+<h3 id="heading-9">
+<a name="341-creaci%C3%B3n-de-clases-para-formularios" class="md-header-anchor"></a><span>3.4.1 Creación de clases para formularios</span>
+</h3>
+<p><span>Hasta ahora, hemos definido los formularios directamente en los controladores afectados. Así, en el caso de la aplicación de contactos, hemos definido un formulario para la ruta </span><code>/contacto/nuevo</code><span> y otro (el mismo, prácticamente) para la ruta </span><code>/contacto/editar</code><span>.</span></p>
+<p><span>Lo recomendado, según la documentación de Symfony, es no ubicar los formularios directamente en los controladores, sino crearlos en una clase aparte. De esta forma, podríamos reutilizar los formularios en varios controladores, y no repetir código innecesariamente.</span></p>
+<p><span>Veamos cómo quedaría esta clase para el formulario de inserción y edición de contactos. Como siempre, podemos crear el formulario donde queramos, pero por unificar criterios, y siguiendo los ejemplos de la documentación de Symfony, crearemos una carpeta </span><code>Form</code><span> en nuestra carpeta </span><code>src</code><span>, y pondremos dentro los formularios. En nuestro caso, crearemos una clase llamada </span><code>ContactoType</code><span>, que heredará de una clase base genérica de Symfony llamada </span><code>AbstractType</code><span>. Dentro, definimos el método </span><code>buildForm</code><span> que se encargará de crear el formulario, como hacíamos antes en el método nuevo o en editar:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99739px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;?</span><span class="cm-variable">php</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">namespace</span> <span class="cm-def">App\Form</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\AbstractType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\FormBuilderInterface</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\TextType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\HiddenType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\EmailType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Form\Extension\Core\Type\SubmitType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Bridge\Doctrine\Form\Type\EntityType</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">App\Entity\Provincia</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">ContactoType</span> <span class="cm-keyword">extends</span> <span class="cm-variable">AbstractType</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">buildForm</span>(<span class="cm-variable">FormBuilderInterface</span> <span class="cm-variable-2">$builder</span>, <span class="cm-keyword">array</span> <span class="cm-variable-2">$options</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$builder</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'nombre'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'telefono'</span>, <span class="cm-variable">TextType</span>::<span class="cm-keyword">class</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'email'</span>, <span class="cm-variable">EmailType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Correo electrónico'</span>))</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'provincia'</span>, <span class="cm-variable">EntityType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">                <span class="cm-string">'class'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable">Provincia</span>::<span class="cm-keyword">class</span>,</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">                <span class="cm-string">'choice_label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'nombre'</span>,))</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-operator">-&gt;</span><span class="cm-variable">add</span>(<span class="cm-string">'save'</span>, <span class="cm-variable">SubmitType</span>::<span class="cm-keyword">class</span>, <span class="cm-keyword">array</span>(<span class="cm-string">'label'</span> <span class="cm-operator">=&gt;</span> <span class="cm-string">'Enviar'</span>));</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 661px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 661px;"></div>
+</div>
+</div></pre>
+<p><span>Ahora, sólo nos queda reemplazar el código de crear el formulario en nuevo o editar por el uso de esta nueva clase:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99731px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* @Route("/contacto/nuevo", name="nuevo_contacto")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">nuevo</span>(<span class="cm-variable">ManagerRegistry</span> <span class="cm-variable-2">$doctrine</span>, <span class="cm-variable">Request</span> <span class="cm-variable-2">$request</span>) {</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Contacto</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    </span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$formulario</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createForm</span>(<span class="cm-variable">ContactoType</span>::<span class="cm-keyword">class</span>, <span class="cm-variable-2">$contacto</span>);</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">handleRequest</span>(<span class="cm-variable-2">$request</span>);</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">isSubmitted</span>() <span class="cm-operator">&amp;&amp;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">isValid</span>()) {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getData</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$entityManager</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$doctrine</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getManager</span>();</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$entityManager</span><span class="cm-operator">-&gt;</span><span class="cm-variable">persist</span>(<span class="cm-variable-2">$contacto</span>);</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$entityManager</span><span class="cm-operator">-&gt;</span><span class="cm-builtin">flush</span>();</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">redirectToRoute</span>(<span class="cm-string">'ficha_contacto'</span>, [<span class="cm-string">"codigo"</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$contacto</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getId</span>()]);</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'nuevo.html.twig'</span>, <span class="cm-keyword">array</span>(</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-string">'formulario'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createView</span>()</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    ));</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 503px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 503px;"></div>
+</div>
+</div></pre>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99739px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* @Route("/contacto/editar/{codigo}", name="editar_contacto",requirements={"codigo"="\d+"})</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">editar</span>(<span class="cm-variable">ManagerRegistry</span> <span class="cm-variable-2">$doctrine</span>, <span class="cm-variable">Request</span> <span class="cm-variable-2">$request</span>, <span class="cm-variable-2">$codigo</span>) {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$repositorio</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$doctrine</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getRepository</span>(<span class="cm-variable">Contacto</span>::<span class="cm-keyword">class</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$repositorio</span><span class="cm-operator">-&gt;</span><span class="cm-variable">find</span>(<span class="cm-variable-2">$codigo</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable-2">$contacto</span>){</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">formularios</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createForm</span>(<span class="cm-variable">ContactoType</span>::<span class="cm-keyword">class</span>, <span class="cm-variable-2">$contacto</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">handleRequest</span>(<span class="cm-variable-2">$request</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">if</span> (<span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">isSubmitted</span>() <span class="cm-operator">&amp;&amp;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">isValid</span>()) {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$contacto</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getData</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$entityManager</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$doctrine</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getManager</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$entityManager</span><span class="cm-operator">-&gt;</span><span class="cm-variable">persist</span>(<span class="cm-variable-2">$contacto</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable-2">$entityManager</span><span class="cm-operator">-&gt;</span><span class="cm-builtin">flush</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">redirectToRoute</span>(<span class="cm-string">'ficha_contacto'</span>, [<span class="cm-string">"codigo"</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$contacto</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getId</span>()]);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'nuevo.html.twig'</span>, <span class="cm-keyword">array</span>(</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'formulario'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$formulario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">createView</span>()</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        ));</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }<span class="cm-keyword">else</span>{</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'ficha_contacto.html.twig'</span>, [</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'contacto'</span> <span class="cm-operator">=&gt;</span> <span class="cm-atom">NULL</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        ]);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 683px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 683px;"></div>
+</div>
+</div></pre>
+<p> </p>
+<h3 id="heading-10">
+<a name="342-a%C3%B1adiendo-estilo-a-los-formularios" class="md-header-anchor"></a><span>3.4.2 Añadiendo estilo a los formularios</span>
+</h3>
+<p><span>Los formularios que hemos generado en esta sesión son muy funcionales, pero poco vistosos, ya que carecen de estilos CSS propios. Si quisiéramos añadir CSS a estos formularios, tenemos varias opciones.</span></p>
+<p><span>Una opción rudimentaria consiste en añadir clases (atributo class) a los controles del formulario para dar estilos personalizados. Después, en nuestro CSS bastaría con indicar el estilo para la clase en cuestión.</span></p>
+<p><span>Pero Symfony ofrece diversos temas (</span><code>themes</code><span>) que podemos aplicar a los formularios (y webs en general) para darles una apariencia general tomada de algún framework conocido, como Bootstrap o Foundation. Si queremos optar por la apariencia de Bootstrap, debemos hacer lo siguiente:</span>
+<span>Incluir la hoja de estilos CSS y el archivo Javascript de Bootstrap en nuestras plantillas. </span></p>
+<ol>
+<li>
+<p><span>Una práctica habitual es hacerlo en la plantilla </span><code>base.html.twig</code><span> para que cualquiera que herede de ella adopte este estilo. Para ello, en la sección </span><code>stylesheets</code><span> debemos añadir el código </span><a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/#css"><span>HTML</span></a><span> que hay en la documentación oficial de Bootstrap para incluir su hoja de estilo, y en la sección javascripts los </span><a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/#js"><span>enlaces</span></a><span> a las diferentes librerías que se indican en la documentación de Bootstrap también.</span>
+<span>Al final tendremos algo como esto:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99744px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre>x</pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;!DOCTYPE html&gt;</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;html&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;head&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        &lt;meta charset="UTF-8"&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        &lt;title&gt;<span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> title </span><span class="cm-tag">%}</span>Welcome!<span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span>&lt;/title&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        &lt;link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22&gt;&lt;text y=%221.2em%22 font-size=%2296%22&gt;⚫️&lt;/text&gt;&lt;/svg&gt;"&gt;</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-comment">{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}</span></span></pre></div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> stylesheets </span><span class="cm-tag">%}</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"&gt;</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            &lt;link href="<span class="cm-tag">{{</span><span class="cm-variable"> asset(</span><span class="cm-string">'css/estilos.css'</span><span class="cm-variable">) </span><span class="cm-tag">}}</span>" rel="stylesheet" /&gt;</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> javascripts </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-tag">{{</span><span class="cm-variable"> encore_entry_script_tags(</span><span class="cm-string">'app'</span><span class="cm-variable">) </span><span class="cm-tag">}}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;/head&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;body&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> body </span><span class="cm-tag">%}{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;/body&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/html&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 728px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 728px;"></div>
+</div>
+</div></pre>
+</li>
+<li>
+<p><span>Editar el archivo de configuración </span><code>config/packages/twig.yaml</code><span> e indicar que los formularios usarán el tema de Bootstrap (en este caso, Bootstrap 4):</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99738px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">twig</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># ....</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    form_themes</span><span class="cm-meta">: [</span><span class="cm-string">'bootstrap_5_horizontal_layout.html.twig'</span><span class="cm-meta">]</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 76px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 76px;"></div>
+</div>
+</div></pre>
+</li>
+</ol>
+<p><span>Con estos dos cambios, la apariencia de nuestro formulario de contactos queda así:</span></p>
+<p><img src="assets/1549872641935.png" referrerpolicy="no-referrer" alt="1549872641935"></p>
+<p><span>Se tienen otras alternativas, como por ejemplo no indicar esta configuración general en </span><code>config/packages/twig.yaml</code><span> e indicar formulario por formulario el tema que va a tener:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99744px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-variable"> form_theme formulario </span><span class="cm-string">'bootstrap_5_horizontal_layout.html.twig'</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{{</span><span class="cm-variable"> form_start(formulario) </span><span class="cm-tag">}}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 76px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 76px;"></div>
+</div>
+</div></pre>
+<p><span>Existen también otros temas disponibles que utilizar. Podéis consultar más información </span><a href="https://symfony.com/doc/current/form/form_customization.html#what-are-form-themes"><span>aquí</span></a><span>.</span></p>
+<h3 id="heading-11">
+<a name="343-a%C3%B1adir-estilos-para-las-validaciones" class="md-header-anchor"></a><span>3.4.3 Añadir estilos para las validaciones</span>
+</h3>
+<p><span>En el caso de las validaciones de datos del formulario, también podemos definir estilos para que los mensajes que de error que se muestran (parámetro </span><code>message</code><span> o similares en las anotaciones de la entidad) tengan un estilo determinado. Esto se consigue fácilmente eligiendo alguno de los temas predefinidos de Symfony. Por ejemplo, eligiendo Bootstrap, la apariencia de los errores de validación queda así automáticamente:</span></p>
+<p><img src="assets/1549872771901.png" referrerpolicy="no-referrer" alt="1549872771901"></p>
+<p><span>Estamos hablando de las validaciones en el servidor, ya que las que se efectúan desde el cliente por parte del propio HTML5 no tienen un estilo controlable desde Symfony.</span></p>
+<p><span>Podríamos desactivar esta validación para que todo corra a cargo del servidor, si fuera el caso. Para ello, basta con añadir un atributo </span><code>novalidate</code><span> en el formulario al renderizarlo:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99741px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{{</span><span class="cm-variable"> form_start(formulario, {</span><span class="cm-string">'attr'</span><span class="cm-variable">: {</span><span class="cm-string">'novalidate'</span><span class="cm-variable">: </span><span class="cm-string">'novalidate'</span><span class="cm-tag">}}</span>) }}</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 53px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 53px;"></div>
+</div>
+</div></pre>
+<h3 id="heading-12">
+<a name="344-creaci%C3%B3n-guiada-de-formularios" class="md-header-anchor"></a><span>3.4.4 Creación guiada de formularios</span>
+</h3>
+<p><span>Symfony también tiene un asistente para la generación de formularios al que se accede con el siguiente comando:</span></p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99738px; left: 4.16669px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">symfony console <span class="cm-builtin">make</span>:form ContactoForm Contacto</span></pre>
+</div></div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 31px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 31px;"></div>
+</div>
+</div></pre>
+<p><span>Que crea  un formulario llamado </span><code>ContactoFormType</code><span> a partir de la entidad </span><code>Contacto</code></p>
+<p> </p>
+</div>      <div id='custom-footer'>
+        <!--put here your custom footer -->
+      </div>
+    </div>
+  </div><!--typora-export-->
+</div><!--typora-container-->
+
+<!-- jQuery first, then Bootstrap JS -->
+  <script type="text/javascript">
+   class TyporaToc {
+  constructor (maxHeadingLevel = 6) {
+    this.maxHeadingLevel = maxHeadingLevel;
+    this.previous = null;
+    this.topEl = document.querySelector(".top");
+    let headings = "";
+    for (let i = 1; i <= this.maxHeadingLevel; i++){
+      headings += `h${i},`;
+    }
+    headings = headings.substr(0, headings.length - 1);
+    this.allHeadings = document.querySelectorAll(headings);
+    this.allTocAnchors = document.querySelectorAll(".md-toc-content a");
+    this.currentTocAnchor = null;
+    this.typoraContainer = document.querySelector(".typora-container");
+    this.writeEl = document.querySelector("#write");
+    this.codeMirrors = document.querySelectorAll('.CodeMirror-code');
+    this.navNext = document.querySelector('#nav-next');
+    this.navPrevious = document.querySelector('#nav-previous');
+    this.typoraMenu = document.querySelector('.typora-menu');
+    this.lastScrollTop = 0;
+    this.lastActive = null;
+
+    this.initEvents();
+  }
+
+  initEvents (){
+    let oSelf = this;
+    document.querySelector(".top .toogle").addEventListener('click', e => {
+      e.preventDefault();
+      let el = e.target;
+      if (el.matches("i")){
+        el = el.parentNode;
+      }
+      if (el.classList.contains('expanded')){
+        oSelf.typoraContainer.classList.add('hide-menu');
+      }else{
+        oSelf.typoraContainer.classList.remove('hide-menu');
+      }
+      el.classList.toggle('expanded');
+    });
+    
+    this.allTocAnchors.forEach(function(elem) {
+      elem.addEventListener("click", e =>  {
+          e.preventDefault();
+          oSelf.allTocAnchors.forEach(function(anchor){
+            anchor.classList.remove('active');
+          })
+          elem.classList.add("active");
+          oSelf.currentTocAnchor = document.querySelector("[name='" + decodeURI(e.target.href.split("#")[1]) + "']");
+          if (!oSelf.currentTocAnchor){
+            //Chrome no decodeURI
+            oSelf.currentTocAnchor = document.querySelector("[name='" + (e.target.href.split("#")[1]) + "']");
+          }
+          if (oSelf.currentTocAnchor){
+            oSelf.currentTocAnchor.scrollIntoView({ behavior: 'smooth' })
+            window.setTimeout(() =>location.hash = e.target.href.split("#")[1],500);
+          }
+          
+      });
+    });
+
+    this.topEl.addEventListener('click', e => {
+      e.preventDefault();
+      
+      let el = e.target;
+      if (el.matches("i")){
+          el = el.parentNode;
+      }
+      if ((el.getAttribute("id") === "nav-previous") || ((el.getAttribute("id") === "nav-next"))){
+          let name =  el.getAttribute('href').split("#")[1];
+          if (name !== "")
+            location.hash = name;
+      }
+    });
+
+    window.addEventListener('keydown', function(e) {
+      
+      if (e.keyCode == 39){
+      	e.preventDefault();
+        location.hash = oSelf.navNext.getAttribute("href");
+      }else if(e.keyCode == 37){
+      	e.preventDefault();
+        location.hash = oSelf.navPrevious.getAttribute("href");
+      }
+    });
+
+    window.onload = function(){
+
+      //Add next and previous to headings
+      for (let idx = 0; idx < oSelf.allHeadings.length; idx++) {
+        let currentHeading = oSelf.allHeadings.item(idx);
+        let next;
+        
+        if (oSelf.allHeadings.item(idx+1)){
+          next = oSelf.allHeadings.item(idx+1).getElementsByTagName("a").item(0);
+        }
+        if (next){
+          currentHeading.setAttribute("data-next", next.getAttribute("name"));
+        }else{
+          currentHeading.setAttribute("data-next", "");
+        }
+        if (oSelf.previous){
+          currentHeading.setAttribute("data-previous", oSelf.previous.getAttribute("name"));
+        }else{
+          currentHeading.setAttribute("data-previous", "");
+        }
+        oSelf.previous = currentHeading.getElementsByTagName("a").item(0);
+       
+      }
+    
+      //Get hash, if any, to same document
+      function getAnchor() {
+        var currentUrl = document.URL,
+        urlParts   = currentUrl.split('#');
+        
+        return (urlParts.length > 1) ? urlParts[1] : null;
+      }
+    
+      //Activate link to hash
+      let anchor = getAnchor();
+    
+      let curTocEl =  document.querySelector("[href='" + anchor + "']");
+      if (curTocEl)
+        curTocEl.classList.add("active");
+    
+    }
+
+    window.addEventListener('scroll', function(e) {
+      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+        if (st > oSelf.lastScrollTop){
+          oSelf.allHeadings.forEach(function(heading) {
+            if (oSelf.isAnyPartOfElementInViewport(heading)){
+              oSelf.navPrevious.setAttribute("href", "#" + heading.getAttribute("data-previous"));
+              oSelf.navNext.setAttribute("href", "#" + heading.getAttribute("data-next"));
+              oSelf.typoraMenu.querySelectorAll("a").forEach(function(anchor){
+                anchor.classList.remove('active');
+              });
+              oSelf.lastActive = oSelf.typoraMenu.querySelector( "#anchor-" + heading.getAttribute('id'));
+              oSelf.lastActive.classList.add('active');
+              if (!oSelf.isAnyPartOfElementInViewport(oSelf.lastActive)){
+                oSelf.lastActive.scrollIntoView();
+              }
+            }
+          } 
+        );
+       } else {
+        let notFound = true; 
+        oSelf.allHeadings.forEach(function(heading) {
+            if (oSelf.isAnyPartOfElementInViewport(heading)){
+              oSelf.navPrevious.setAttribute("href", "#" + heading.getAttribute("data-previous"));
+              oSelf.navNext.setAttribute("href", "#" + heading.getAttribute("data-next"));
+              notFound = false;
+              oSelf.typoraMenu.querySelectorAll("a").forEach(function(anchor){
+                anchor.classList.remove('active');
+              });
+              oSelf.lastActive = oSelf.typoraMenu.querySelector( "#anchor-" + heading.getAttribute('id'));
+              oSelf.lastActive.classList.add('active');
+              if (!oSelf.isAnyPartOfElementInViewport(oSelf.lastActive)){
+                oSelf.lastActive.scrollIntoView();
+              }
+            }
+          } 
+        );
+        if (notFound){
+          oSelf.typoraMenu.querySelectorAll("a").forEach(function(anchor){
+            anchor.classList.remove('active');
+          });
+          if (oSelf.lastActive){
+            let lastId = oSelf.lastActive.getAttribute("id").split("-")[2] - 1;
+            let t = oSelf.typoraMenu.querySelector( "#anchor-heading-" + lastId);
+            if (t){
+              t.classList.add('active');
+              if (!oSelf.isAnyPartOfElementInViewport(t)){
+                t.scrollIntoView();
+                oSelf.navPrevious.setAttribute("href", "#" + t.getAttribute("data-previous"));
+                oSelf.navNext.setAttribute("href", "#" + t.getAttribute("data-next"));
+              }
+            }
+          }
+        }
+       }
+       oSelf.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    });
+    //In some browsers (Mozilla Firefox), there are some strange characters in codeMirror so if you cut and paste code
+    //it doesn't compile because of these characters
+    this.codeMirrors.forEach(function(elem) {
+      let lines = elem.querySelectorAll('pre > span');
+      lines.forEach(function(line){
+        line.innerHTML = (line.innerHTML.replace(/[\u0250-\ue007]/g, ''));
+        let spans =  line.querySelectorAll("span");
+        spans.forEach(function(span){
+          span.textContent = (span.textContent.replace(/[\u0250-\ue007]/g, ''));
+        });
+          
+      });
+    });
+
+  }
+
+  isAnyPartOfElementInViewport(el) {
+
+    const rect = el.getBoundingClientRect();
+    // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+    
+    // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
+    const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+    
+    return (vertInView && horInView);
+  }
+}
+   let toc = new TyporaToc(6);
+  </script>
+</body>
+</html>
