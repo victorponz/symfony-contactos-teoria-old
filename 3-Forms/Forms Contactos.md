@@ -14,33 +14,7 @@ En este apartado veremos de qué forma se pueden definir formularios en Symfony 
 
 Los formularios pueden crearse fácilmente desde cualquier controlador. Basta con que creemos u obtengamos el objeto asociado al formulario (por ejemplo, un contacto), y carguemos un formulario con él. En nuestra aplicación de contactos, vamos a crear un nuevo controlador que responda a la URI `/contacto/nuevo`, y que cree un contacto vacío y muestre el formulario.
 
-```php
-namespace App\Controller;
-...
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-class ContactoController extends AbstractController
-{
-...
-	/**
-	* @Route("/contacto/nuevo", name="nuevo_contacto")
-	*/
-	public function nuevo() {
-		$contacto = new Contacto();
-
-		$formulario = $this->createFormBuilder($contacto)
-			->add('nombre', TextType::class)
-			->add('telefono', TextType::class)
-			->add('email', TextType::class)
-			->add('save', SubmitType::class, array('label' => 'Enviar'))
-			->getForm();
-		
-		return $this->render('nuevo.html.twig', array(
-			'formulario' => $formulario->createView()
-		));
-	}
-...
-```
+![image-20220119080746033](assets/image-20220119080746033.png)
 
 Como podemos ver, a través del `form builder` de Symfony se crea el formulario. Después, añadimos tantos campos como atributos tenga la entidad (normalmente), asociando cada atributo con su campo por el nombre.
 
@@ -64,15 +38,7 @@ En cada campo especificamos también de qué tipo es. En nuestro caso, hemos def
 
 El código del controlador anterior termina renderizando una vista llamada `nuevo.html.twig` que, por ahora, no existe. En esta vista deberemos renderizar el formulario. Podría quedar así:
 
-```twig
-{% extends 'base.html.twig' %}
-
-{% block title %}Contactos{% endblock %}
-{% block body %}
-    <h1>Nuevo contacto</h1>
-    {{ form(formulario) }}    
-{% endblock %}
-```
+![image-20220119080816639](assets/image-20220119080816639.png)
 
 La línea debajo del encabezado `h1` es la responsable de la renderización del formulario propiamente dicho, a partir del parámetro formulario que le pasamos desde el controlador.
 Si ahora accedemos a http://127.0.0.1:8080/contacto/nuevo podremos ver el formulario:
@@ -84,7 +50,7 @@ Si ahora accedemos a http://127.0.0.1:8080/contacto/nuevo podremos ver el formul
 Como podemos ver para el caso del botón de `submit`, podemos especificar un tercer parámetro en el método `add` que es un array de propiedades del control en cuestión. Una de ellas es la propiedad `label`, que nos permite especificar qué texto tendrá asociado el control. Por defecto, se asocia el nombre del atributo correspondiente en la entidad, pero podemos cambiarlo por un texto personalizado. Para el `e­mail`, por ejemplo, podríamos poner:
 
 ```php
-->add('email', EmailType::class, array('label' => 'Correo electrónico'))
+->add('email', TextType::class, array('label' => 'Correo electrónico'))
 ```
 
 ![image-20220109174433735](assets/image-20220109174433735.png)
@@ -132,37 +98,7 @@ Para gestionar el envío de estos datos, hay que hacer algunas modificaciones so
 
 Uniendo estas premisas, nuestro controlador quedaría así:
 
-```php
-/**
-* @Route("/contacto/nuevo", name="nuevo_contacto")
-*/
-public function nuevo(ManagerRegistry $doctrine, Request $request) {
-    $contacto = new Contacto();
-
-    
-    $formulario = $this->createFormBuilder($contacto)
-        ->add('nombre', TextType::class)
-        ->add('telefono', TextType::class)
-        ->add('email', EmailType::class, array('label' => 'Correo electrónico'))
-        ->add('provincia', EntityType::class, array(
-            'class' => Provincia::class,
-            'choice_label' => 'nombre',))
-        ->add('save', SubmitType::class, array('label' => 'Enviar'))
-        ->getForm();
-        $formulario->handleRequest($request);
-
-        if ($formulario->isSubmitted() && $formulario->isValid()) {
-            $contacto = $formulario->getData();
-            $entityManager = $doctrine->getManager();
-            $entityManager->persist($contacto);
-            $entityManager->flush();
-            return $this->redirectToRoute('ficha_contacto', ["codigo" => $contacto->getId()]);
-        }
-        return $this->render('nuevo.html.twig', array(
-            'formulario' => $formulario->createView()
-        ));
-}
-```
+![image-20220119080842340](assets/image-20220119080842340.png)
 
 Si probamos ahora a cargar el formulario y realizar una inserción, nos enviará a la página de inicio, y podremos ver el nuevo contacto presente en la tabla correspondiente de la base de datos.
 
@@ -172,30 +108,7 @@ Lo que hemos hecho en el ejemplo anterior es una inserción de un nuevo contacto
 
 Podemos probarlo con este controlador:
 
-```php
-/**
-* @Route("/contacto/editar/{codigo}", name="editar_contacto",
-requirements={"codigo"="\d+"})
-*/
-public function editar(Request $request, $codigo) {
-
-	$repositorio = $this->getDoctrine()->getRepository(Contacto::class);
-
-	$contacto = $repositorio->find($codigo);
-
-	$formulario = $this->createFormBuilder($contacto)
-		->add('nombre', TextType::class)
-		->add('telefono', TextType::class)
-		->add('email', EmailType::class)
-		->add('provincia', EntityType::class, array(
-			'class' => Provincia::class,
-			'choice_label' => 'nombre',))
-		->add('save', SubmitType::class, array('label' => 'Enviar'))
-		->getForm();
-
-	$formulario->handleRequest($request);
-	...
-```
+![image-20220119081205806](assets/image-20220119081205806.png)
 
 Ahora, si accedemos a http://127.0.0.1:8080/contacto/editar/1, por ejemplo (suponiendo que tengamos un contacto con `id = 1` en la base de datos), se cargará el formulario con sus datos, y al enviarlo, se modificarán los campos que hayamos cambiado, y se cargará la página de inicio.
 
@@ -535,8 +448,8 @@ Podríamos desactivar esta validación para que todo corra a cargo del servidor,
 Symfony también tiene un asistente para la generación de formularios al que se accede con el siguiente comando:
 
 ```shell
-symfony console make:form ContactoForm Contacto
+php bin/console make:form ProvinciaForm Provincia
 ```
 
-Que crea  un formulario llamado `ContactoFormType` a partir de la entidad `Contacto`
+Que crea  un formulario llamado `ProvinciaFormType` a partir de la entidad `Provincia`
 
