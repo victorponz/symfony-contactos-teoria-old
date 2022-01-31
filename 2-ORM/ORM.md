@@ -135,6 +135,19 @@ Como podemos observar, el campo `codigo` que usábamos en nuestra base de datos 
 
 En cuanto a los tipos de datos que podemos especificar, si pulsamos `?` e `Intro` cuando vayamos a especificar el tipo de dato, veremos un listado completo de los tipos disponibles (también lo podéis consultar [aquí](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html#doctrine-mapping-types)). Lo habitual será trabajar con cadenas de texto de una longitud determinada (`string`), textos ilimitados (`text`), enteros (`integer`), booleanos (`boolean`), reales (`float`), fechas (`date`, `time` o `datetime`, dependiendo de lo que queramos almacenar)...
 
+### 2.3.1 Campos calculados
+
+Se pueden crear campos calculados en las entidades simplemente creando un getter para dicho campo. Por ejemplo queremos crear una campo que devuelva un número random entre 1 y 5:
+
+```php
+public function getRandom(): int
+{	
+	return rand(1,10);
+}
+```
+
+En este caso no está ligado a ningún campo en el esquema de la entidad.
+
 ## 2.3 Generación del esquema
 
 Una vez hemos definida la entidad, podemos generar la correspondiente tabla en la base de datos. Para ello, escribimos este comando:
@@ -373,7 +386,7 @@ Por ejemplo, si quisiéramos insertar un contacto asignándole una provincia:
 * Si la provincia no existe, creamos un objeto de tipo `Provincia`, y después otro de tipo `Contacto`, estableciendo como provincia el objeto `Provincia` recién creado:
 ![image-20220109165914273](assets/image-20220109165914273.png)
   
-* Ahora modificamos la plantilla `ficha_contacto.html.twig`
+* Ahora modificamos la plantilla `datos_contacto.html.twig`
 ![image-20220109165941038](assets/image-20220109165941038.png)
   
   Añadiendo la provincia mediante`contacto.provincia.nombre`
