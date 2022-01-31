@@ -345,7 +345,7 @@ public function editar(ManagerRegistry $doctrine, Request $request, $codigo) {
 
     $contacto = $repositorio->find($codigo);
     if ($contacto){
-        formularios->createForm(ContactoType::class, $contacto);
+        $formulario = $this->createForm(ContactoType::class, $contacto);
 
         $formulario->handleRequest($request);
 
