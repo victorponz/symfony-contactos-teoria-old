@@ -1,0 +1,1886 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Seguridad y control de acceso</title>
+<!-- Bootstrap CSS -->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css' integrity='sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp' crossorigin='anonymous'>
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type="text/css">html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+.cm-s-inner { background-color: rgb(38, 50, 56); color: rgb(233, 237, 237); }
+.cm-s-inner .CodeMirror-gutters { background: rgb(38, 50, 56); color: rgb(83, 127, 126); border: none; }
+.cm-s-inner .CodeMirror-guttermarker, .cm-s-inner .CodeMirror-guttermarker-subtle, .cm-s-inner .CodeMirror-linenumber { color: rgb(83, 127, 126); }
+.cm-s-inner .CodeMirror-cursor { border-left: 1px solid rgb(248, 248, 240); }
+.cm-s-inner div.CodeMirror-selected { background: rgba(255, 255, 255, 0.15); }
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected { background: rgba(255, 255, 255, 0.1); }
+.cm-s-inner .CodeMirror-line::selection, .cm-s-inner .CodeMirror-line > span::selection, .cm-s-inner .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.1); }
+.cm-s-inner .CodeMirror-activeline-background { background: rgba(0, 0, 0, 0); }
+.cm-s-inner .cm-keyword { color: rgb(199, 146, 234); }
+.cm-s-inner .cm-operator { color: rgb(233, 237, 237); }
+.cm-s-inner .cm-variable-2 { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-variable-3 { color: rgb(130, 177, 255); }
+.cm-s-inner .cm-builtin { color: rgb(222, 203, 107); }
+.cm-s-inner .cm-atom { color: rgb(247, 118, 105); }
+.cm-s-inner .cm-number { color: rgb(247, 118, 105); }
+.cm-s-inner .cm-def { color: rgb(233, 237, 237); }
+.cm-s-inner .cm-string { color: rgb(195, 232, 141); }
+.cm-s-inner .cm-string-2 { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-comment { color: rgb(84, 110, 122); }
+.cm-s-inner .cm-variable { color: rgb(130, 177, 255); }
+.cm-s-inner .cm-tag { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-meta { color: rgb(128, 203, 196); }
+.cm-s-inner .cm-attribute { color: rgb(255, 203, 107); }
+.cm-s-inner .cm-property { color: rgb(128, 203, 174); }
+.cm-s-inner .cm-qualifier { color: rgb(222, 203, 107); }
+.cm-s-inner .cm-variable-3 { color: rgb(222, 203, 107); }
+.cm-s-inner .cm-tag { color: rgb(255, 83, 112); }
+.cm-s-inner .cm-error { color: rgb(255, 255, 255); background-color: rgb(236, 95, 103); }
+.cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+.md-fences { background-color: rgb(38, 50, 56); color: rgb(233, 237, 237); border: none; }
+.md-fences .code-tooltip { background-color: rgb(38, 50, 56); }
+.md-diagram-panel { font-family: Arial; font-size: 14px; line-height: 16px; }
+
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+<style type='text/css'>
+body.typora-export{
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #f8f8f8;
+}
+#write-wrapper{
+    margin:0px auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 960px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c2c2c2;
+    
+}
+#write, #custom-footer{
+    max-width: 100%;
+}
+.typora-menu  {
+    left:0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    overflow-y: auto;
+    width: 300px;
+    color: #364149;
+    background: #2c2c2c;
+    border-right: 1px solid rgba(0,0,0,.07);
+    -webkit-transition: left 250ms ease;
+    -moz-transition: left 250ms ease;
+    -o-transition: left 250ms ease;
+    transition: left 250ms ease;
+    opacity: .9;
+}
+.hide-menu .typora-menu{
+    left:-300px;
+}
+.main-content{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    color: #000;
+}
+#nav-previous, #nav-next, .top a.toogle{
+  -webkit-transition: left 250ms ease;
+    -moz-transition: left 250ms ease;
+    -o-transition: left 250ms ease;
+    transition: left 250ms ease;
+    background-color: #2c2c2c;
+    opacity: .9;
+}
+.hide-menu #nav-previous, .hide-menu #nav-next, .hide-menu .top a.toogle{
+    left: 0;
+}
+
+.hide-menu .main-content{
+    margin-left:0px;
+}
+
+.md-toc-item a{
+    display: block;
+    padding: 4px 4px;
+    border-bottom: none;
+    color: #fafafa;
+    background: 0 0;
+    position: relative;
+    outline: none;
+}
+.top{
+    position: fixed;
+    top:0;
+    z-index: 4;
+    width: 30%;
+}
+
+.top a.toogle{
+    color:#c2c2c2;
+    padding: 8px;
+    height: 30px;
+    left: 300px;
+    position: fixed;
+    padding-top:2px;
+}
+#nav-previous{
+    color:#c2c2c2;
+    padding: 8px;
+    left: 300px;
+    position: fixed;
+    top: 30px;
+    height: 30px;
+    padding-top:2px;
+}
+#nav-next{
+    color:#c2c2c2;
+    padding: 8px;
+    left: 300px;
+    position: fixed;
+    top: 60px;
+    height: 30px;
+    padding-top:2px;
+}
+.top a.toogle:hover, .top a.toogle:focus, #nav-previous:hover, #nav-next:hover, #nav-previous:focus, #nav-next:focus{
+    color:rgb(65, 131, 196);
+}
+.md-toc-content a{
+    border-left: 1px solid transparent;
+}
+.md-toc-content a.active{
+    border-left: 1px solid #fafafa;
+    color:rgb(65, 131, 196);
+}
+.md-toc-h1 .md-toc-inner{
+    font-weight: inherit;
+}
+.md-toc-h2 .md-toc-inner{
+    margin-left: 0.4em;
+}
+.md-toc-h3 .md-toc-inner{
+    margin-left: 2em;
+}
+.md-toc-h4 .md-toc-inner{
+    margin-left: 3em;
+}
+.md-toc-h5 .md-toc-inner{
+    margin-left: 4em;
+}
+.md-toc-h6 .md-toc-inner{
+    margin-left: 5em;
+}
+
+.md-toc-h1 a.md-toc-inner{
+    font-size: 1.3rem;
+}
+
+.raw-code{
+	cursor:pointer;
+    position: absolute;
+    top: -28px;
+    right: 0;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 2px 4px;
+    border: 1px solid #263237;
+    color: #263237;
+}
+.raw-code.hide{
+	display:none;
+}
+.raw-code.show{
+	display:inherit;
+}</style>
+ 
+</head>
+<body class="typora-export">
+<div class="typora-container">
+  <div class="typora-menu"><div class="md-toc" mdtype="toc">
+	<p class="md-toc-content"><span class='md-toc-item md-toc-h1'><a title ='Seguridad y control de acceso' class="md-toc-inner active" style="cursor: pointer;" href="">Seguridad y control de acceso</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-0' title='El archivo security.yaml. El firewall de Symfony' class="md-toc-inner" style="cursor: pointer;" href="#header-n144">El archivo security.yaml. El firewall de Symfony</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-1' title='Establecer el modo de autenticación y origen de datos' class="md-toc-inner" style="cursor: pointer;" href="#header-n153">Establecer el modo de autenticación y origen de datos</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-2' title='Definir la entidad y tabla de usuarios' class="md-toc-inner" style="cursor: pointer;" href="#header-n156">Definir la entidad y tabla de usuarios</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-3' title='Implementar las interfaces requeridas' class="md-toc-inner" style="cursor: pointer;" href="#header-n175">Implementar las interfaces requeridas</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-4' title='Configurar el origen de datos y el modo de autenticación' class="md-toc-inner" style="cursor: pointer;" href="#header-n192">Configurar el origen de datos y el modo de autenticación</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-5' title='Definir la ruta y el formulario de login' class="md-toc-inner" style="cursor: pointer;" href="#header-n203">Definir la ruta y el formulario de login</a></span>
+<span class='md-toc-item md-toc-h2'><a id='anchor-heading-6' title='Algunas opciones avanzadas' class="md-toc-inner" style="cursor: pointer;" href="#header-n214">Algunas opciones avanzadas</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-7' title='Encriptar las contraseñas' class="md-toc-inner" style="cursor: pointer;" href="#header-n216">Encriptar las contraseñas</a></span>
+<span class='md-toc-item md-toc-h3'><a id='anchor-heading-8' title='Trabajar con roles' class="md-toc-inner" style="cursor: pointer;" href="#header-n230">Trabajar con roles</a></span>
+<span class='md-toc-item md-toc-h4'><a id='anchor-heading-9' title='Asignar distintos roles a distintos recursos protegidos' class="md-toc-inner" style="cursor: pointer;" href="#header-n234">Asignar distintos roles a distintos recursos protegidos</a></span>
+<span class='md-toc-item md-toc-h4'><a id='anchor-heading-10' title='Establecer jerarquías entre roles' class="md-toc-inner" style="cursor: pointer;" href="#header-n237">Establecer jerarquías entre roles</a></span>
+<span class='md-toc-item md-toc-h4'><a id='anchor-heading-11' title='Comprobar roles desde los controladores y vistas' class="md-toc-inner" style="cursor: pointer;" href="#header-n241">Comprobar roles desde los controladores y vistas</a></span>
+<span class='md-toc-item md-toc-h4'><a id='anchor-heading-12' title='Obtener el objeto usuario' class="md-toc-inner" style="cursor: pointer;" href="#header-n254">Obtener el objeto usuario</a></span>
+<span class='md-toc-item md-toc-h4'><a id='anchor-heading-13' title='Saliendo de la aplicación (logout)' class="md-toc-inner" style="cursor: pointer;" href="#header-n259">Saliendo de la aplicación (logout)</a></span>
+</p></div></div>
+  <div class="typora-export  main-content">
+  <div class='top'>
+    <a class='toogle expanded pull-left js-toolbar-action' aria-label='' href='#'><i class='fas fa-align-justify'></i></a>
+    <a class='' href='#' id='nav-previous'><i class='fas fa-angle-double-left'></i></a>
+    <a class='' href='#' id='nav-next'><i class='fas fa-angle-double-right'></i></a>
+  </div>
+    <div id='write-wrapper'>
+      <div id='custom-header'>
+        <!--put here your custom header -->
+       </div>
+       <div id="write" class="is-node">
+<p>El sistema de seguridad de Symfony es muy potente y versátil, aunque también puede resultar algo complicado de entender y configurar. En esta sesión aprenderemos a establecer los elementos principales del mismo:</p>
+<ul>
+<li>El mecanismo de <strong>autenticación</strong>, es decir, establecer dónde están registrados los usuarios con acceso a la aplicación, para poder acceder a ellos y validar las credenciales de quien entra.</li>
+<li>El mecanismo de <strong>autorización</strong>, es decir, una vez se ha validado el usuario que accede, y siempre que éste sea correcto, determinar sus permisos y a qué recursos puede acceder y a cuáles no.</li>
+</ul>
+<h2 id="heading-0">
+<a name="header-n144" class="md-header-anchor "></a>El archivo <code>security.yaml</code>. El firewall de Symfony</h2>
+<p>El archivo <code>config/packages/security.yaml</code> almacena la configuración general del sistema de seguridad de nuestra aplicación Symfony. Su contenido por defecto es éste:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    </span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># ...</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    firewalls</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        dev</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            pattern</span><span class="cm-meta">: </span>^/(_(profiler|wdt)|css|images|js)/</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            security</span><span class="cm-meta">: </span><span class="cm-keyword">false</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        main</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            anonymous</span><span class="cm-meta">: </span><span class="cm-keyword">true</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 253px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 253px;"></div>
+</div>
+</div></pre>
+<p>La sección <strong>firewalls</strong> es el núcleo principal de nuestro sistema de seguridad. Dentro vemos dos subsecciones: una llamada <strong>dev</strong>, que simplemente se asegura de que el profiler de Symfony y la barra de depuración (WDT, Web Debug Toolbar) no se ven afectados por nuestro sistema de seguridad en el modo desarrollo, de forma que podamos seguir teniendo la información de estado en la barra inferior que aparece al probar la aplicación:</p>
+<p><img src="assets/1549900463851.png" alt="1549900463851" referrerpolicy="no-referrer"></p>
+<p>El resto de elementos de la aplicación se gestionarán desde la subsección es main, donde
+pondremos la lógica de seguridad de nuestra aplicación. De hecho, el no tener una
+subsección pattern implica que automáticamente absorbe el resto de URLs que no hayan
+coincidido con ningún patrón anterior del firewall.</p>
+<p>La subsección <code>anonymous: true</code> indica que se permite un acceso anónimo a las secciones que no estén protegidas. De hecho, si accedemos a la web de contactos y examinamos la barra inferior de estado, veremos que estamos logueados como anónimos.</p>
+<p><img src="assets/1549900536818.png" alt="1549900536818" referrerpolicy="no-referrer"></p>
+<p>Veremos a continuación cómo añadir elementos de <strong>autenticación</strong> en este apartado de configuración.</p>
+<h2 id="heading-1">
+<a name="header-n153" class="md-header-anchor "></a>Establecer el modo de autenticación y origen de datos</h2>
+<p>Podemos establecer distintos modos de autenticación, y distintas fuentes de datos de donde tomar los usuarios para validar. El mecanismo más simple (y menos recomendado) consiste en utilizar una autenticación basic de HTTP (aquella que muestra un “prompt” básico para introducir login y password, como hicimos con Apache), y almacenar los usuarios en el propio archivo <code>security.yaml</code>. Los passwords pueden (deben) estar encriptados en dicho archivo, pero aún así, no es un mecanismo muy recomendable de almacenamiento.</p>
+<p>Nos saltaremos esta opción, e iremos a la que realmente nos interesa: tendremos los usuarios registrados en una tabla de una base de datos MySQL (en este caso, de nuestra base de datos de contactos), y definiremos un formulario de login que utilizar para validarnos contra esa tabla a la hora de acceder a recursos protegidos.</p>
+<h3 id="heading-2">
+<a name="header-n156" class="md-header-anchor "></a>Definir la entidad y tabla de usuarios</h3>
+<p>En nuestra aplicación de contactos, vamos a añadir una nueva entidad para almacenar los usuarios de la aplicación, y su correspondiente tabla asociada, empleando Doctrine. Los usuarios tendrán en este caso un id (autonumérico generado por Doctrine), un login, un password, un e­mail y un rol (más adelante veremos para qué se utiliza el rol).</p>
+<p>Por lo tanto, crearemos primero la entidad de esta forma:</p>
+<p><script src="https://asciinema.org/a/7tiQjjSyRxAwN5x7ItypjEvr2.js" id="asciicast-7tiQjjSyRxAwN5x7ItypjEvr2" async="true"></script></p>
+<p>Una vez creada la entidad, el siguiente paso es migrar los cambios a la base de datos, como ya hemos hecho previamente:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">php bin/console make:migration</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">php bin/console doctrine:migration:migrate</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 46px;"></div>
+</div>
+</div></pre>
+<p>Alternativamente a estos dos comandos, y en el caso de que dé algún conflicto con migraciones previas, también podemos ejecutar estos otros dos, que gestionan mejor las diferencias o novedades a migrar:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">php bin/console doctrine:migrations:diff</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">php bin/console doctrine:migrations:migrate</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 46px;"></div>
+</div>
+</div></pre>
+<p>Podemos añadir a mano un usuario de prueba en la base de datos, con estos atributos:</p>
+<ul>
+<li>login: user</li>
+<li>password: 1234</li>
+<li>email: <a href="mailto:usuario@ieselcaminas.org" target="_blank" class="url">usuario@ieselcaminas.org</a>
+</li>
+<li>rol: ROLE_USER</li>
+</ul>
+<p>Insistimos, volveremos a tratar los roles más adelante. De momento dejaremos establecido éste para este usuario de prueba.</p>
+<h3 id="heading-3">
+<a name="header-n175" class="md-header-anchor "></a>Implementar las interfaces requeridas</h3>
+<p>Para poder utilizar una entidad como fuente de usuarios que loguear, es necesario que dicha entidad implemente la interfaz <a href="https://api.symfony.com/4.2/Symfony/Component/Security/Core/User/UserInterface.html">UserInterface</a>, lo que obliga a definir los métodos:</p>
+<ul>
+<li>
+<code>getRoles()</code>, que devolverá un array con los roles del usuario (en este caso, cada usuario sólo tendrá un rol, que devolveremos en un array)</li>
+<li>
+<code>getPassword()</code>, que devolverá el password del usuario</li>
+<li>
+<code>getUserName()</code>, que devolverá el login del usuario</li>
+<li>
+<code>getSalt()</code>, que en ocasiones no es necesario emplear. Se emplea en mecanismos de codificación de passwords más avanzados que los que veremos en el curso. Así que en nuestro ejemplo devolveremos null.</li>
+<li>
+<code>eraseCredentials()</code>, que se emplea para eliminar información sensible o privada del usuario. Puede ser útil si, por ejemplo, se almacena el password del usuario sin encriptar. En primera instancia lo haremos así, pero luego lo encriptaremos, así que este método lo vamos a dejar vacío.</li>
+</ul>
+<p>Además, conviene implementar la interfaz Serializable para poder serializar objetos de tipo Usuario y enviarlos entre las partes de la aplicación (más adelante veremos cómo obtener el objeto Usuario del usuario logueado). Esto implica añadir dos métodos más: <code>serialize</code> (para convertir el usuario en texto que enviar entre componentes) y <code>unserialize</code> (para convertir un texto en un objeto Usuario).</p>
+<p>Con todo esto, nuestra entidad Usuario queda así (eliminamos los getters y setters generados automáticamente y que no vamos a emplear en realidad):</p>
+<script src="https://gist.github.com/victorponz/ef071ac6681488aa28e96114eed632d3.js"></script><p>En el caso de la función <code>unserialize</code>, se le pasa como segundo parámetro un array de opciones. La opción <code>allowed_classes</code> que se utiliza en este ejemplo, puesta a false, hace que no se permita la serialización de objetos de ninguna clase (sólo los tipos simples que componen los atributos de la entidad <code>Usuario</code>, en este caso).</p>
+<h3 id="heading-4">
+<a name="header-n192" class="md-header-anchor "></a>Configurar el origen de datos y el modo de autenticación</h3>
+<p>Vamos ahora a indicar dónde tiene que buscar Symfony los usuarios cuando alguien intente acceder al sistema. Para ello, vamos al archivo de configuración <code>config/packages/ security.yaml</code>, y añadimos un nuevo proveedor de datos, enlazado a la entidad <code>Usuario</code>:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    providers</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">       <span class="cm-comment"># ...</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        user_provider</span><span class="cm-meta">:</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            entity</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                class</span><span class="cm-meta">: </span>App\Entity\Usuario</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                property</span><span class="cm-meta">: </span>login</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 207px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 207px;"></div>
+</div>
+</div></pre>
+<p>Indicamos el nombre de la entidad, y el nombre del atributo que hace de <code>login</code> (definido en la entidad <code>Usuario</code>)</p>
+<p>Después, algo más abajo en ese mismo fichero (subsección <code>security &gt; firewalls &gt; main</code>), establecemos que nos loguearemos mediante un formulario, que se activará con la ruta llamada <code>login</code> que definiremos después:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    providers</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-comment"># ...</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        main</span><span class="cm-meta">:</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            anonymous</span><span class="cm-meta">: </span>~</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            form_login</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                provider</span><span class="cm-meta">: </span>user_provider</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                login_path</span><span class="cm-meta">: </span>login</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                check_path</span><span class="cm-meta">: </span>login</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 253px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 253px;"></div>
+</div>
+</div></pre>
+<p>En este caso, hemos anulado (puesto a null) el acceso anónimo (eso es lo que significa el símbolo <code>~</code> junto a <strong>anonymous</strong>). Por otra parte, indicamos que tanto para mostrar el formulario como para verificar el logueo, se acudirá a la misma ruta <code>login</code>, empleando como proveedor de usuarios el elemento <code>user_provider</code> que hemos definido antes, basado en la entidad <code>Usuario</code>.</p>
+<p>Podemos, además, definir qué recursos se van a proteger con este formulario. Conviene, al menos, especificar un patrón de ruta que excluya al propio formulario de login, ya que de lo contrario entraríamos en un bucle infinito en el que, para acceder al formulario de login, debemos loguearnos con el formulario de login. Para ello, editamos la sección <code>access_control</code> al final del archivo <code>security.yaml</code>, e indicamos, al menos, dos rutas: una sin proteger para el login, y la otra protegida para lo que queramos (en este caso, el resto de la aplicación):</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># ...</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    access_control</span><span class="cm-meta">:</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">        - {</span><span class="cm-atom"> path</span><span class="cm-meta">: </span>^/login<span class="cm-meta">,</span><span class="cm-atom"> roles</span><span class="cm-meta">: </span>IS_AUTHENTICATED_ANONYMOUSLY <span class="cm-meta">}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">        - {</span><span class="cm-atom"> path</span><span class="cm-meta">: </span>^/<span class="cm-meta">,</span><span class="cm-atom"> roles</span><span class="cm-meta">: </span>ROLE_USER <span class="cm-meta">}</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 115px;"></div>
+</div>
+</div></pre>
+<p>Finalmente, también podemos especificar el sistema de codificado del password. Por ahora no lo vamos a codificar, por lo que añadimos este subapartado al final (dentro de la sección <code>security</code>):</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment"># ...</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    encoders</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        App\Entity\Usuario</span><span class="cm-meta">: </span>plaintext</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 138px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 138px;"></div>
+</div>
+</div></pre>
+<h3 id="heading-5">
+<a name="header-n203" class="md-header-anchor "></a>Definir la ruta y el formulario de login</h3>
+<p>Finalmente, vamos a crear un nuevo controlador llamado <code>LoginController</code> en nuestra carpeta de <code>src/Controller</code>, que definirá una nueva ruta <code>/login</code> para mostrar el formulario de login y verificar el error de validación, si es el caso. Puede quedar más o menos así:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;?</span><span class="cm-variable">php</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">namespace</span> <span class="cm-def">App\Controller</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Routing\Annotation\Route</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Bundle\FrameworkBundle\Controller\AbstractController</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Security\Http\Authentication\AuthenticationUtils</span>;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">LoginController</span> <span class="cm-keyword">extends</span> <span class="cm-variable">AbstractController</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">/**</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">* @Route("/login", name="login")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">     <span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">login</span>(<span class="cm-variable">AuthenticationUtils</span> <span class="cm-variable-2">$authenticationUtils</span>)</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable-2">$error</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$authenticationUtils</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getLastAuthenticationError</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    </span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'login.html.twig'</span>, <span class="cm-keyword">array</span>(</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">'error'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$error</span>,</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        ));   </span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 506px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 506px;"></div>
+</div>
+</div></pre>
+<p>Fijaos cómo le inyecta automáticamente <code>AuthenticationUtils</code>.</p>
+<p>Podríamos obtener otros datos del proceso de validación. Por ejemplo, en caso de que el usuario no se valide correctamente, podríamos recuperar su login para volverlo a introducir automáticamente en la plantilla del formulario, y así evitar que lo tenga que volver a escribir. Para ello, tenemos el método <code>getLastUsername()</code> del objeto <code>AuthenticationUtils</code>. Basta con recuperar el dato y pasarlo a la plantilla:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$error</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$authenticationUtils</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getLastAuthenticationError</span>();</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$lastUsername</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$authenticationUtils</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getLastUsername</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">return</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">render</span>(<span class="cm-string">'login.html.twig'</span>, <span class="cm-keyword">array</span>(</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'error'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$error</span>,</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'lastUsername'</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">$lastUsername</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>));</span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 161px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 161px;"></div>
+</div>
+</div></pre>
+<p>El formulario de login al que se llama, <code>login.html.twig</code>, puede ser algo así:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> extends</span><span class="cm-variable"> </span><span class="cm-string">'base.html.twig'</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> title </span><span class="cm-tag">%}</span>Contactos<span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> block</span><span class="cm-variable"> body </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;h1&gt;Login&lt;/h1&gt;</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> if</span><span class="cm-variable"> error </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;div&gt;<span class="cm-tag">{{</span><span class="cm-variable"> error.messageKey </span><span class="cm-tag">}}</span>&lt;/div&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> endif</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;form action="<span class="cm-tag">{{</span><span class="cm-variable"> path(</span><span class="cm-string">'login'</span><span class="cm-variable">) </span><span class="cm-tag">}}</span>" method="post"&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;label for="username"&gt;Login:&lt;/label&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;input type="text" id="username" name="_username" /&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;label for="password"&gt;Password:&lt;/label&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;input type="password" id="password" name="_password" /&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;button type="submit"&gt;Entrar&lt;/button&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/form&gt;</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> endblock</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 529px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 529px;"></div>
+</div>
+</div></pre>
+<p>Como vemos, se tiene una bloque <code>div</code> condicional para mostrar un error de validación si es el caso. Además, el formulario tiene que cumplir unas normas: el campo de login debe llamarse <code>_username</code> (atributo “name”), y el campo de password debe llamarse <code>_password</code>.</p>
+<p>Estas opciones pueden configurarse y personalizarse, pero esto queda fuera del propósito del curso (<a href="https://symfony.com/doc/current/reference/configuration/security.html#reference-security-firewall-form-login">aquí</a> tenéis más información).</p>
+<p>Tras todos estos pasos, ya tendremos listo el sistema de autenticación. Puede parecer extraño, pero así es... En realidad, Symfony se hace cargo automáticamente de la validación del usuario cuando éste envía el formulario de login. Si hay algún error, se registrará dentro del controlador login y se renderizará el formulario con el mensaje de error. Si todo es correcto, se redirige al usuario automáticamente hacia la página que solicitó.</p>
+<h2 id="heading-6">
+<a name="header-n214" class="md-header-anchor "></a>Algunas opciones avanzadas</h2>
+<p>Ahora que ya hemos aprendido a configurar una forma básica de autenticación con formulario de login, veamos algunos aspectos algo más avanzados de la configuración de la seguridad en Symfony.</p>
+<h3 id="heading-7">
+<a name="header-n216" class="md-header-anchor "></a>Encriptar las contraseñas</h3>
+<p>Es conveniente que las contraseñas de los usuarios registrados no estén en texto plano sin encriptar, como en el ejemplo anterior. Podemos emplear, por ejemplo, un algoritmo de encriptación bcrypt para cifrarlas. Esto supone dos pasos extra:</p>
+<ul>
+<li>
+<p>Indicar a Symfony que los passwords están encriptados con <code>bcrypt</code> para que aplique este algoritmo al encriptar cualquier password, incluido el que introduzca el usuario al loguearse, y así poder comparar si los dos passwords encriptados coinciden. Para hacer esto, debemos editar el archivo de configuración <code>config/packages/security.yaml</code> e indicar que la entidad <code>Usuario</code> utilizará el método de encriptación que hayamos escogido:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># ...</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    encoders</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        App\Entity\Usuario</span><span class="cm-meta">: </span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            algorithm</span><span class="cm-meta">: </span>bcrypt</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            cost</span><span class="cm-meta">: </span>12   </span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 184px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 184px;"></div>
+</div>
+</div></pre>
+<p>El parámetro <strong>cost</strong> indica cuántas vueltas da el proceso para codificar el password, en un rango entre 4 y 31. Cuanto más largo sea, más costará encriptarlo. Existen otros métodos de encriptación aceptados, como <strong>md5</strong>, <strong>sha256</strong>... aunque según la documentación oficial de Symfony, <strong>bcrypt</strong> es el más recomendable.</p>
+</li>
+<li>
+<p>Encriptar de forma automática los passwords de los usuarios cuando se registren.
+Si tuviéramos un formulario de registro en nuestra aplicación, y tenemos los datos del usuario guardados en un objeto usuario, y el password en sí en un objeto password, la encriptación sería como sigue:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface</span>;</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">register</span>(<span class="cm-variable">UserPasswordEncoderInterface</span> <span class="cm-variable-2">$encoder</span>) {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$usuario</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">App\Entity\Usuario</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">// Asignamos aquí el resto de atributos del usuario</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$passwordCodificado</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$encoder</span><span class="cm-operator">-&gt;</span><span class="cm-variable">encodePassword</span>(<span class="cm-variable-2">$usuario</span>, <span class="cm-variable-2">$password</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$usuario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">setPassword</span>(<span class="cm-variable-2">$passwordCodificado</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">// Guardar en la base de datos, si procede</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 230px;"></div>
+</div>
+</div></pre>
+<p>Lo que hacemos es acudir a la configuración del archivo <code>security.yaml</code> anterior para ver qué codificador se ha establecido, y mediante el objeto de tipo <code>UserPassword</code> <code>EncoderInterface</code> que recibe como parámetro el método, y de su método <code>encodePassword</code>, codificar el password con ese mismo algoritmo. Dicho método recibe como primer parámetro el usuario sobre el que se está trabajando, y como segundo parámetro el password a codificar. Una vez codificado, se le asigna al usuario, y ya se podría guardar en la base de datos.</p>
+</li>
+</ul>
+<p>Para probar nuestro ejemplo de contactos, como no tenemos formulario de registro, vamos a codificar manualmente el/los password(s) que tengamos en la base de datos.</p>
+<p>Podemos emplear para ello webs como <a href="https://bcrypt-generator.com/">ésta</a>. En la sección de Encrypt, indicamos en el cuadro String to encrypt el password sin encriptar, y en el cuadro inferior establecemos el coste o número de vueltas. Después pulsamos el botón de Hash! y obtendremos el password encriptado.</p>
+<p><img src="assets/1549902633700.png" alt="1549902633700" referrerpolicy="no-referrer"></p>
+<h3 id="heading-8">
+<a name="header-n230" class="md-header-anchor "></a>Trabajar con roles</h3>
+<p>En los ejemplos hechos hasta ahora, nos hemos limitado a definir un campo rol en nuestra entidad <code>Usuario</code>, y a almacenar un usuario con rol <code>ROLE_USER</code>, pero sin prestar demasiada atención a lo que ese rol significa.</p>
+<p>Para empezar, debemos saber que todos los roles que definamos en nuestra aplicación deben comenzar con el prefijo <code>ROLE_</code> para que Symfony los trate como tales. Existe la posibilidad de configurar esta opción y poner roles más flexibles o arbitrarios, pero no entraremos en eso en este curso.</p>
+<p>Symfony permite definir diferentes roles en una aplicación, y establecer una jerarquía entre ellos, de forma que un rol pueda hacer todo lo que hace otro más otras cosas. Además, podemos proteger el acceso a recursos para determinados roles, de forma que sólo ciertos roles (o roles que estén por encima de ellos en la jerarquía) puedan acceder.</p>
+<h4 id="heading-9">
+<a name="header-n234" class="md-header-anchor "></a>Asignar distintos roles a distintos recursos protegidos</h4>
+<p>En el caso de que cada zona protegida de nuestra aplicación pueda tener asignados roles diferentes, basta con indicar el rol (o roles entre corchetes) que tienen permiso para cada zona. Por ejemplo, en este caso protegemos el acceso a cualquier ruta que empiece por <code>/contacto</code> para que sólo puedan acceder usuarios con rol <code>ROLE_USER</code> o <code>ROLE_MANAGER</code>, además de la configuración ya establecida en ejemplos previos:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    access_control</span><span class="cm-meta">:</span></span></pre>
+</div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">        - {</span><span class="cm-atom"> path</span><span class="cm-meta">: </span>^/login<span class="cm-meta">,</span><span class="cm-atom"> roles</span><span class="cm-meta">: </span>IS_AUTHENTICATED_ANONYMOUSLY <span class="cm-meta">}</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">        - {</span><span class="cm-atom"> path</span><span class="cm-meta">: </span>^/contacto<span class="cm-meta">,</span><span class="cm-atom"> roles</span><span class="cm-meta">: [</span>ROLE_USER<span class="cm-meta">,</span> ROLE_MANAGER<span class="cm-meta">]</span> <span class="cm-meta">}</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">        - {</span><span class="cm-atom"> path</span><span class="cm-meta">: </span>^/<span class="cm-meta">,</span><span class="cm-atom"> roles</span><span class="cm-meta">: </span>ROLE_USER <span class="cm-meta">}</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+</div>
+</div></pre>
+<h4 id="heading-10">
+<a name="header-n237" class="md-header-anchor "></a>Establecer jerarquías entre roles</h4>
+<p>Puede ser necesario también establecer una jerarquía entre roles, de forma que, si se tiene un rol de nivel superior, se tendrá acceso a todos los recursos que exijan un rol de nivel inferior. Para hacer esto, añadimos un subapartado <code>role_hierarchy</code> en nuestra sección <code>security</code> de <code>config/packages/security.yaml</code>, estableciendo dicha jerarquía. </p>
+<p>En el siguiente ejemplo, el rol <code>ROLE_ADMIN</code> contiene a su vez a <code>ROLE_USER</code>, y el <code>ROLE_SUPERADMIN</code> contiene tanto a <code>ROLE_ADMIN</code> (y, por tanto, a <code>ROLE_USER</code>), como a <code>ROLE_MANAGER</code>.</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    role_hierarchy</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        ROLE_ADMIN</span><span class="cm-meta">:       </span>ROLE_USER</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        ROLE_SUPER_ADMIN</span><span class="cm-meta">: [</span>ROLE_ADMIN<span class="cm-meta">,</span> ROLE_MANAGER<span class="cm-meta">]</span></span></pre></div>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 69px;"></div>
+</div>
+</div></pre>
+<h4 id="heading-11">
+<a name="header-n241" class="md-header-anchor "></a>Comprobar roles desde los controladores y vistas</h4>
+<p>Existe también la posibilidad de forzar una comprobación de seguridad en el código de los controladores, basándose en si el usuario registrado tiene cierto rol o no, o simplemente si se ha autenticado o no. Por ejemplo, este controlador permite el acceso a su código si el usuario tiene el <code>ROLE_ADMIN</code>:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* @Route("/admin", name="admin")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">admin</span>() {</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">denyAccessUnlessGranted</span>(<span class="cm-string">'ROLE_ADMIN'</span>, <span class="cm-atom">null</span>,</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-string">'Acceso restringido a administradores'</span>);</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">// Resto del código del controlador</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 184px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 184px;"></div>
+</div>
+</div></pre>
+<p>Este otro controlador simplemente comprueba si el usuario se ha autenticado correctamente antes de seguir:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">otroControlador</span>() {</span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">denyAccessUnlessGranted</span>(<span class="cm-string">'IS_AUTHENTICATED_FULLY'</span>);</span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment">// Resto del código del controlador</span></span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+</div>
+</div></pre>
+<p>En cualquier caso, el método <code>denyAccessUnlessGranted</code> provoca que:</p>
+<ul>
+<li>Si el usuario aún no se ha autenticado, se le redirige a la página de login</li>
+<li>Si se ha autenticado, pero no tiene el rol requerido, se genera una página de error <code>HTTP 403</code> (acceso prohibido). Esta página se puede personalizar (podéis consultar más información <a href="https://symfony.com/doc/current/controller/error_pages.html">aquí</a>).</li>
+</ul>
+<p>También es posible comprobar un determinado rol o autenticación desde el código de una plantilla Twig, mediante la función <code>is_granted</code>. Esto puede servir para mostrar o no ciertos apartados de la vista.</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> if</span><span class="cm-variable"> is_granted(</span><span class="cm-string">'ROLE_ADMIN'</span><span class="cm-variable">) </span><span class="cm-tag">%}</span></span></pre>
+</div>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">...</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">{%</span><span class="cm-keyword"> endif</span><span class="cm-variable"> </span><span class="cm-tag">%}</span></span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 69px;"></div>
+</div>
+</div></pre>
+<h4 id="heading-12">
+<a name="header-n254" class="md-header-anchor "></a>Obtener el objeto usuario</h4>
+<p>Una vez autenticados, el objeto usuario se puede obtener a través del método <code>getUser</code>, normalmente desde dentro de un controlador. Así, podríamos tener algo como esto:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="php"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="php">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* @Route("/admin", name="admin")</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">function</span> <span class="cm-def">admin</span>() {</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">denyAccessUnlessGranted</span>(<span class="cm-string">'IS_AUTHENTICATED_FULLY'</span>);</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable-2">$usuario</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$this</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getUser</span>();</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">return</span> <span class="cm-keyword">new</span> <span class="cm-variable">Response</span>(<span class="cm-string">"Bienvenido a /admin, "</span> . <span class="cm-variable-2">$usuario</span><span class="cm-operator">-&gt;</span><span class="cm-variable">getUserName</span>());</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 184px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 184px;"></div>
+</div>
+</div></pre>
+<p>Desde una plantilla Twig también es posible acceder al usuario logueado, y obtener, por ejemplo, su login, con el objeto <code>app.user</code>:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="twig"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Bienvenido/a, <span class="cm-tag">{{</span><span class="cm-variable"> app.user.username </span><span class="cm-tag">}}</span></span></pre>
+</div></div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+</div>
+</div></pre>
+<h4 id="heading-13">
+<a name="header-n259" class="md-header-anchor "></a>Saliendo de la aplicación (logout)</h4>
+<p>Podemos configurar el cierre de sesión o logout a través de archivos YAML exclusivamente. Basta con seguir estos dos pasos:</p>
+<ul>
+<li>
+<p>En primer lugar, establecemos que cuando se salga de la aplicación se redirigirá, por ejemplo, a la raíz de la misma. Esto se hace en el archivo <code>config/packages/security.yaml</code>. Por ejemplo, para permitir cerrar sesión en el firewall <code>main</code>, con el que estamos trabajando en nuestro ejemplo, haríamos esto:</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation" style="">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">security</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment"># https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">   <span class="cm-comment"># ...</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    firewalls</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        dev</span><span class="cm-meta">:</span></span></pre>
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            pattern</span><span class="cm-meta">: </span>^/(_(profiler|wdt)|css|images|js)/</span></pre></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            security</span><span class="cm-meta">: </span><span class="cm-keyword">false</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">        main</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            anonymous</span><span class="cm-meta">: </span>~</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            form_login</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                provider</span><span class="cm-meta">: </span>user_provider</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                login_path</span><span class="cm-meta">: </span>login</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                check_path</span><span class="cm-meta">: </span>login</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">            logout</span><span class="cm-meta">:</span></span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                path</span><span class="cm-meta">: </span>/logout</span></pre>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">                target</span><span class="cm-meta">: </span>/</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 391px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 391px;"></div>
+</div>
+</div></pre>
+</li>
+<li>
+<p>En segundo lugar, definimos una ruta en el archivo <code>config/routes.yaml</code> que asocie el nombre <code>logout</code> (o como lo queramos llamar) con la ruta que hayamos definido antes (en este caso, la ruta <code>/logout</code>):</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="yaml"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="yaml">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">logout</span><span class="cm-meta">:</span></span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">    path</span><span class="cm-meta">: </span>/logout</span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 46px;"></div>
+</div>
+</div></pre>
+</li>
+</ul>
+<p>Con esto, y algún enlace en nuestras plantillas para poder cerrar sesión (por ejemplo, en la plantilla base)...</p>
+<pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded md-focus" lang="twig"><div class="CodeMirror cm-s-inner CodeMirror-wrap CodeMirror-focused" lang="twig">
+<div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 23px; left: 353px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+<div class="CodeMirror-scroll" tabindex="-1">
+<div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+<div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div>
+<div class="CodeMirror-measure"></div>
+<div style="position: relative; z-index: 1;"></div>
+<div class="CodeMirror-code" role="presentation">
+<div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;div&gt;</span></pre></div>
+<div class="CodeMirror-activeline" style="position: relative;">
+<div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+<div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    &lt;a href="<span class="cm-tag">{{</span><span class="cm-variable"> path(</span><span class="cm-string">'logout'</span><span class="cm-variable">) </span><span class="cm-tag">}}</span>"&gt;Cerrar sesión&lt;/a&gt;            </span></pre>
+</div>
+<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/div&gt;    </span></pre>
+</div>
+</div></div></div></div>
+<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div>
+<div class="CodeMirror-gutters" style="display: none; height: 69px;"></div>
+</div>
+</div></pre>
+<p> </p>
+</div>      <div id='custom-footer'>
+        <!--put here your custom footer -->
+      </div>
+    </div>
+  </div><!--typora-export-->
+</div><!--typora-container-->
+
+<!-- jQuery first, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>  
+  <script type="text/javascript">
+   'use strict';
+// https://github.com/iamdustan/smoothscroll/edit/master/src/smoothscroll.js
+// polyfill
+function polyfill() {
+  // aliases
+  var w = window;
+  var d = document;
+
+  // return if scroll behavior is supported and polyfill is not forced
+  if (
+    'scrollBehavior' in d.documentElement.style &&
+    w.__forceSmoothScrollPolyfill__ !== true
+  ) {
+    return;
+  }
+
+  // globals
+  var Element = w.HTMLElement || w.Element;
+  var SCROLL_TIME = 468;
+
+  // object gathering original scroll methods
+  var original = {
+    scroll: w.scroll || w.scrollTo,
+    scrollBy: w.scrollBy,
+    elementScroll: Element.prototype.scroll || scrollElement,
+    scrollIntoView: Element.prototype.scrollIntoView
+  };
+
+  // define timing method
+  var now =
+    w.performance && w.performance.now
+      ? w.performance.now.bind(w.performance)
+      : Date.now;
+
+  /**
+   * indicates if a the current browser is made by Microsoft
+   * @method isMicrosoftBrowser
+   * @param {String} userAgent
+   * @returns {Boolean}
+   */
+  function isMicrosoftBrowser(userAgent) {
+    var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+    return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+  }
+
+  /*
+   * IE has rounding bug rounding down clientHeight and clientWidth and
+   * rounding up scrollHeight and scrollWidth causing false positives
+   * on hasScrollableSpace
+   */
+  var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+  /**
+   * changes scroll position inside an element
+   * @method scrollElement
+   * @param {Number} x
+   * @param {Number} y
+   * @returns {undefined}
+   */
+  function scrollElement(x, y) {
+    this.scrollLeft = x;
+    this.scrollTop = y;
+  }
+
+  /**
+   * returns result of applying ease math function to a number
+   * @method ease
+   * @param {Number} k
+   * @returns {Number}
+   */
+  function ease(k) {
+    return 0.5 * (1 - Math.cos(Math.PI * k));
+  }
+
+  /**
+   * indicates if a smooth behavior should be applied
+   * @method shouldBailOut
+   * @param {Number|Object} firstArg
+   * @returns {Boolean}
+   */
+  function shouldBailOut(firstArg) {
+    if (
+      firstArg === null ||
+      typeof firstArg !== 'object' ||
+      firstArg.behavior === undefined ||
+      firstArg.behavior === 'auto' ||
+      firstArg.behavior === 'instant'
+    ) {
+      // first argument is not an object/null
+      // or behavior is auto, instant or undefined
+      return true;
+    }
+
+    if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+      // first argument is an object and behavior is smooth
+      return false;
+    }
+
+    // throw error when behavior is not supported
+    throw new TypeError(
+      'behavior member of ScrollOptions ' +
+        firstArg.behavior +
+        ' is not a valid value for enumeration ScrollBehavior.'
+    );
+  }
+
+  /**
+   * indicates if an element has scrollable space in the provided axis
+   * @method hasScrollableSpace
+   * @param {Node} el
+   * @param {String} axis
+   * @returns {Boolean}
+   */
+  function hasScrollableSpace(el, axis) {
+    if (axis === 'Y') {
+      return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+    }
+
+    if (axis === 'X') {
+      return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+    }
+  }
+
+  /**
+   * indicates if an element has a scrollable overflow property in the axis
+   * @method canOverflow
+   * @param {Node} el
+   * @param {String} axis
+   * @returns {Boolean}
+   */
+  function canOverflow(el, axis) {
+    var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+    return overflowValue === 'auto' || overflowValue === 'scroll';
+  }
+
+  /**
+   * indicates if an element can be scrolled in either axis
+   * @method isScrollable
+   * @param {Node} el
+   * @param {String} axis
+   * @returns {Boolean}
+   */
+  function isScrollable(el) {
+    var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+    var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+    return isScrollableY || isScrollableX;
+  }
+
+  /**
+   * finds scrollable parent of an element
+   * @method findScrollableParent
+   * @param {Node} el
+   * @returns {Node} el
+   */
+  function findScrollableParent(el) {
+    var isBody;
+
+    do {
+      el = el.parentNode;
+
+      isBody = el === d.body;
+    } while (isBody === false && isScrollable(el) === false);
+
+    isBody = null;
+
+    return el;
+  }
+
+  /**
+   * self invoked function that, given a context, steps through scrolling
+   * @method step
+   * @param {Object} context
+   * @returns {undefined}
+   */
+  function step(context) {
+    var time = now();
+    var value;
+    var currentX;
+    var currentY;
+    var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+    // avoid elapsed times higher than one
+    elapsed = elapsed > 1 ? 1 : elapsed;
+
+    // apply easing to elapsed time
+    value = ease(elapsed);
+
+    currentX = context.startX + (context.x - context.startX) * value;
+    currentY = context.startY + (context.y - context.startY) * value;
+
+    context.method.call(context.scrollable, currentX, currentY);
+
+    // scroll more if we have not reached our destination
+    if (currentX !== context.x || currentY !== context.y) {
+      w.requestAnimationFrame(step.bind(w, context));
+    }
+  }
+
+  /**
+   * scrolls window or element with a smooth behavior
+   * @method smoothScroll
+   * @param {Object|Node} el
+   * @param {Number} x
+   * @param {Number} y
+   * @returns {undefined}
+   */
+  function smoothScroll(el, x, y) {
+    var scrollable;
+    var startX;
+    var startY;
+    var method;
+    var startTime = now();
+
+    // define scroll context
+    if (el === d.body) {
+      scrollable = w;
+      startX = w.scrollX || w.pageXOffset;
+      startY = w.scrollY || w.pageYOffset;
+      method = original.scroll;
+    } else {
+      scrollable = el;
+      startX = el.scrollLeft;
+      startY = el.scrollTop;
+      method = scrollElement;
+    }
+
+    // scroll looping over a frame
+    step({
+      scrollable: scrollable,
+      method: method,
+      startTime: startTime,
+      startX: startX,
+      startY: startY,
+      x: x,
+      y: y
+    });
+  }
+
+  // ORIGINAL METHODS OVERRIDES
+  // w.scroll and w.scrollTo
+  w.scroll = w.scrollTo = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      original.scroll.call(
+        w,
+        arguments[0].left !== undefined
+          ? arguments[0].left
+          : typeof arguments[0] !== 'object'
+            ? arguments[0]
+            : w.scrollX || w.pageXOffset,
+        // use top prop, second argument if present or fallback to scrollY
+        arguments[0].top !== undefined
+          ? arguments[0].top
+          : arguments[1] !== undefined
+            ? arguments[1]
+            : w.scrollY || w.pageYOffset
+      );
+
+      return;
+    }
+
+    // LET THE SMOOTHNESS BEGIN!
+    smoothScroll.call(
+      w,
+      d.body,
+      arguments[0].left !== undefined
+        ? ~~arguments[0].left
+        : w.scrollX || w.pageXOffset,
+      arguments[0].top !== undefined
+        ? ~~arguments[0].top
+        : w.scrollY || w.pageYOffset
+    );
+  };
+
+  // w.scrollBy
+  w.scrollBy = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0])) {
+      original.scrollBy.call(
+        w,
+        arguments[0].left !== undefined
+          ? arguments[0].left
+          : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+        arguments[0].top !== undefined
+          ? arguments[0].top
+          : arguments[1] !== undefined ? arguments[1] : 0
+      );
+
+      return;
+    }
+
+    // LET THE SMOOTHNESS BEGIN!
+    smoothScroll.call(
+      w,
+      d.body,
+      ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+      ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+    );
+  };
+
+  // Element.prototype.scroll and Element.prototype.scrollTo
+  Element.prototype.scroll = Element.prototype.scrollTo = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      // if one number is passed, throw error to match Firefox implementation
+      if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+        throw new SyntaxError('Value could not be converted');
+      }
+
+      original.elementScroll.call(
+        this,
+        // use left prop, first number argument or fallback to scrollLeft
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+        // use top prop, second argument or fallback to scrollTop
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+      );
+
+      return;
+    }
+
+    var left = arguments[0].left;
+    var top = arguments[0].top;
+
+    // LET THE SMOOTHNESS BEGIN!
+    smoothScroll.call(
+      this,
+      this,
+      typeof left === 'undefined' ? this.scrollLeft : ~~left,
+      typeof top === 'undefined' ? this.scrollTop : ~~top
+    );
+  };
+
+  // Element.prototype.scrollBy
+  Element.prototype.scrollBy = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      original.elementScroll.call(
+        this,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left + this.scrollLeft
+          : ~~arguments[0] + this.scrollLeft,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top + this.scrollTop
+          : ~~arguments[1] + this.scrollTop
+      );
+
+      return;
+    }
+
+    this.scroll({
+      left: ~~arguments[0].left + this.scrollLeft,
+      top: ~~arguments[0].top + this.scrollTop,
+      behavior: arguments[0].behavior
+    });
+  };
+
+  // Element.prototype.scrollIntoView
+  Element.prototype.scrollIntoView = function() {
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      original.scrollIntoView.call(
+        this,
+        arguments[0] === undefined ? true : arguments[0]
+      );
+
+      return;
+    }
+
+    // LET THE SMOOTHNESS BEGIN!
+    var scrollableParent = findScrollableParent(this);
+    var parentRects = scrollableParent.getBoundingClientRect();
+    var clientRects = this.getBoundingClientRect();
+
+    if (scrollableParent !== d.body) {
+      // reveal element inside parent
+      smoothScroll.call(
+        this,
+        scrollableParent,
+        scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+        scrollableParent.scrollTop + clientRects.top - parentRects.top
+      );
+
+      // reveal parent in viewport unless is fixed
+      if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+        w.scrollBy({
+          left: parentRects.left,
+          top: parentRects.top,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // reveal element in viewport
+      w.scrollBy({
+        left: clientRects.left,
+        top: clientRects.top,
+        behavior: 'smooth'
+      });
+    }
+  };
+}
+
+if (typeof exports === 'object' && typeof module !== 'undefined') {
+  // commonjs
+  module.exports = { polyfill: polyfill };
+} else {
+  // global
+  polyfill();
+}
+  </script>
+
+<script type="text/javascript">
+let previous;
+let t = "";
+let allHeadings = $("h1, h2, h3, h4, h5, h6");
+for (idx = 0; idx < allHeadings.length; idx++) {
+    let o = allHeadings.get(idx);
+    let next;
+    
+    if (allHeadings.get(idx+1)){
+      next = $(allHeadings.get(idx+1)).find("a")
+    }
+    if (next){
+      $(o).attr("data-next", next.attr("name"));
+    }else{
+      $(o).attr("data-next", "");
+    }
+    if (previous){
+      $(o).attr("data-previous", previous.attr("name"));
+    }else{
+      $(o).attr("data-previous", "");
+    }
+    previous = $(o).find("a");
+   
+}
+$('.top .toogle').click(
+  e=>{
+    e.preventDefault();
+      let el = $(e.currentTarget);
+      if (el.hasClass('expanded')){
+        $('.typora-container').addClass('hide-menu');
+      }else{
+        $('.typora-container').removeClass('hide-menu');
+      }
+      el.toggleClass('expanded');
+    }
+);
+$(".md-toc-content a").click(e =>{
+  e.preventDefault();
+  let el = $(e.currentTarget);
+  $(".md-toc-content a").removeClass("active");
+  el.addClass("active");
+  
+    let destination = document.querySelector("[name='" + e.currentTarget.href.split("#")[1] + "']");
+    destination.scrollIntoView({ behavior: 'smooth' })
+    //Hacerlo con una promesa
+    window.setTimeout(() =>location.hash = e.currentTarget.href.split("#")[1],500);
+  
+}); 
+$("#nav-previous, #nav-next").click(e =>{
+  
+
+  let el = $(e.currentTarget);
+  let name =  e.currentTarget.href.split("#")[1];
+  if (name !== "")
+    location.hash = name;;
+
+});
+
+function isAnyPartOfElementInViewport(el) {
+
+const rect = el.getBoundingClientRect();
+// DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
+const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+// http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
+const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+return (vertInView && horInView);
+}
+let lastScrollTop = 0;
+let lastActive;
+window.addEventListener('keydown', function(e) {
+  let name = null;
+  if (e.keyCode == 39){
+    location.hash = $('#nav-next').attr("href");
+    name =  $('#nav-next').attr("href").split("#")[1];
+  }else if(e.keyCode == 37){
+    location.hash = $('#nav-previous').attr("href");
+    name =  $('#nav-previous').attr("href").split("#")[1];
+  }else{
+    return;
+  }
+});
+let writeEl = document.querySelector("#write");
+
+window.onload = function(){
+  function getAnchor() {
+    var currentUrl = document.URL,
+	  urlParts   = currentUrl.split('#');
+		
+    return (urlParts.length > 1) ? urlParts[1] : null;
+  }
+  let anchor = getAnchor();
+  let curTocEl = $("[href=" + anchor + "]")
+  if (curTocEl)
+    curTocEl.addClass("active");
+
+}
+
+window.addEventListener('scroll', function(e) {
+  var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st > lastScrollTop){
+    $("h1, h2, h3, h4, h5, h6").each(
+    function()
+    {
+        if (isAnyPartOfElementInViewport(this)){
+          let el = $(this);
+          $('#nav-previous').attr("href", "#" + el.attr("data-previous"));
+          $('#nav-next').attr("href", "#" + el.attr("data-next"));
+          $('.typora-menu').find( "a").removeClass('active');
+          lastActive = $('.typora-menu').find( "#anchor-" + el.attr('id'));
+          lastActive.addClass('active');
+          if (!isAnyPartOfElementInViewport(lastActive[0])){
+            lastActive[0].scrollIntoView();
+          }
+          return false;
+        }
+    } 
+  );
+   } else {
+    let notFound = true; 
+    $("h1, h2, h3, h4, h5, h6").each(
+    function()
+    {
+        if (isAnyPartOfElementInViewport(this)){
+          let el = $(this);
+          $('#nav-previous').attr("href", "#" + el.attr("data-previous"));
+          $('#nav-next').attr("href", "#" + el.attr("data-next"));
+          notFound = false;
+          $('.typora-menu').find( "a").removeClass('active');
+          lastActive = $('.typora-menu').find( "#anchor-" + el.attr('id'));
+          lastActive.addClass('active');
+          if (!isAnyPartOfElementInViewport(lastActive[0])){
+            lastActive[0].scrollIntoView();
+          }
+          return false;
+        }
+      
+    } 
+  );
+    if (notFound){
+      $('.typora-menu').find( "a").removeClass('active');
+      if (lastActive){
+        let lastId = lastActive.attr("id").split("-")[2] - 1;
+        let t = $('.typora-menu').find( "#anchor-heading-" + lastId);
+        if (t){
+          t.addClass('active');
+          if (!isAnyPartOfElementInViewport(t[0])){
+              t[0].scrollIntoView();
+              $('#nav-previous').attr("href", "#" + t.attr("data-previous"));
+              $('#nav-next').attr("href", "#" + t.attr("data-next"));
+            }
+          
+        }
+      }
+
+    }
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+  
+});
+
+let codeMirrors = $('.CodeMirror-code');
+codeMirrors.each(function(){
+	let lines = $(this).find('pre > span');
+	let code = "";
+	lines.each(function(){
+		let line = $(this);
+		line.html(line.html().replace(/[\u0250-\ue007]/g, ''));
+		let spans =  line.find("span");
+		spans.each(function(){
+			let span = $(this);
+			span.text(span.text().replace(/[\u0250-\ue007]/g, ''));
+		});
+			
+	});
+}
+);
+
+</script>
+</body>
+</html>
